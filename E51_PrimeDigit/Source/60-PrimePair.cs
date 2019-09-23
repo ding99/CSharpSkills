@@ -63,7 +63,7 @@ namespace E51_PrimeDigit.Source {
 			List<int> add;
 			bool found = false;
 
-			for(int i = 2; i < 10000000; i++) {
+			for(int i = 2; i < 100000000; i++) {
 
 				next = new List<List<int>>();
 				foreach(var a in sums)
