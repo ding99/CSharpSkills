@@ -1,0 +1,7 @@
+C:\ProHC\PEuler\Begin60\E31_Coin\bin\Release\E31_Coin.exe.config
+C:\ProHC\PEuler\Begin60\E31_Coin\bin\Release\E31_Coin.exe
+C:\ProHC\PEuler\Begin60\E31_Coin\bin\Release\E31_Coin.pdb
+C:\ProHC\PEuler\Begin60\E31_Coin\obj\Release\E31_Coin.csprojAssemblyReference.cache
+C:\ProHC\PEuler\Begin60\E31_Coin\obj\Release\E31_Coin.csproj.CoreCompileInputs.cache
+C:\ProHC\PEuler\Begin60\E31_Coin\obj\Release\E31_Coin.exe
+C:\ProHC\PEuler\Begin60\E31_Coin\obj\Release\E31_Coin.pdb

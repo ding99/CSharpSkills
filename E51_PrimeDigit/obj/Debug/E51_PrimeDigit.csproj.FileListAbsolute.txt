@@ -1,0 +1,14 @@
+C:\ProHC\PEuler\Begin60\E51_PrimeDigit\obj\Debug\E51_PrimeDigit.csprojAssemblyReference.cache
+C:\ProHC\PEuler\Begin60\E51_PrimeDigit\obj\Debug\E51_PrimeDigit.csproj.CoreCompileInputs.cache
+C:\ProHC\PEuler\Begin60\E51_PrimeDigit\bin\Debug\E51_PrimeDigit.exe.config
+C:\ProHC\PEuler\Begin60\E51_PrimeDigit\bin\Debug\E51_PrimeDigit.exe
+C:\ProHC\PEuler\Begin60\E51_PrimeDigit\bin\Debug\E51_PrimeDigit.pdb
+C:\ProHC\PEuler\Begin60\E51_PrimeDigit\obj\Debug\E51_PrimeDigit.exe
+C:\ProHC\PEuler\Begin60\E51_PrimeDigit\obj\Debug\E51_PrimeDigit.pdb
+C:\ProHC\PEuler\ProjectEuler\E51_PrimeDigit\bin\Debug\E51_PrimeDigit.exe.config
+C:\ProHC\PEuler\ProjectEuler\E51_PrimeDigit\bin\Debug\E51_PrimeDigit.exe
+C:\ProHC\PEuler\ProjectEuler\E51_PrimeDigit\bin\Debug\E51_PrimeDigit.pdb
+C:\ProHC\PEuler\ProjectEuler\E51_PrimeDigit\obj\Debug\E51_PrimeDigit.csprojAssemblyReference.cache
+C:\ProHC\PEuler\ProjectEuler\E51_PrimeDigit\obj\Debug\E51_PrimeDigit.csproj.CoreCompileInputs.cache
+C:\ProHC\PEuler\ProjectEuler\E51_PrimeDigit\obj\Debug\E51_PrimeDigit.exe
+C:\ProHC\PEuler\ProjectEuler\E51_PrimeDigit\obj\Debug\E51_PrimeDigit.pdb

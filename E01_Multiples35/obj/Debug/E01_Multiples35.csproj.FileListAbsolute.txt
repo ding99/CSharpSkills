@@ -1,0 +1,7 @@
+C:\ProHC\PEuler\Begin60\E01_Multiples35\bin\Debug\Multiples35.exe.config
+C:\ProHC\PEuler\Begin60\E01_Multiples35\bin\Debug\Multiples35.exe
+C:\ProHC\PEuler\Begin60\E01_Multiples35\bin\Debug\Multiples35.pdb
+C:\ProHC\PEuler\Begin60\E01_Multiples35\obj\Debug\E01_Multiples35.csprojAssemblyReference.cache
+C:\ProHC\PEuler\Begin60\E01_Multiples35\obj\Debug\E01_Multiples35.csproj.CoreCompileInputs.cache
+C:\ProHC\PEuler\Begin60\E01_Multiples35\obj\Debug\Multiples35.exe
+C:\ProHC\PEuler\Begin60\E01_Multiples35\obj\Debug\Multiples35.pdb
