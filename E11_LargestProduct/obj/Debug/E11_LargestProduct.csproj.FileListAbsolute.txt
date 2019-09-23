@@ -1,7 +1,0 @@
-C:\ProHC\PEuler\Begin60\E11_LargestProduct\bin\Debug\E11_LargestProduct.exe.config
-C:\ProHC\PEuler\Begin60\E11_LargestProduct\bin\Debug\E11_LargestProduct.exe
-C:\ProHC\PEuler\Begin60\E11_LargestProduct\bin\Debug\E11_LargestProduct.pdb
-C:\ProHC\PEuler\Begin60\E11_LargestProduct\obj\Debug\E11_LargestProduct.csprojAssemblyReference.cache
-C:\ProHC\PEuler\Begin60\E11_LargestProduct\obj\Debug\E11_LargestProduct.csproj.CoreCompileInputs.cache
-C:\ProHC\PEuler\Begin60\E11_LargestProduct\obj\Debug\E11_LargestProduct.exe
-C:\ProHC\PEuler\Begin60\E11_LargestProduct\obj\Debug\E11_LargestProduct.pdb

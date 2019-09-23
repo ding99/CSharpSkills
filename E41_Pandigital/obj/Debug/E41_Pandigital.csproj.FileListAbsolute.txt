@@ -1,7 +1,0 @@
-C:\ProHC\PEuler\Begin60\E41_Pandigital\bin\Debug\E41_Pandigital.exe.config
-C:\ProHC\PEuler\Begin60\E41_Pandigital\bin\Debug\E41_Pandigital.exe
-C:\ProHC\PEuler\Begin60\E41_Pandigital\bin\Debug\E41_Pandigital.pdb
-C:\ProHC\PEuler\Begin60\E41_Pandigital\obj\Debug\E41_Pandigital.csprojAssemblyReference.cache
-C:\ProHC\PEuler\Begin60\E41_Pandigital\obj\Debug\E41_Pandigital.csproj.CoreCompileInputs.cache
-C:\ProHC\PEuler\Begin60\E41_Pandigital\obj\Debug\E41_Pandigital.exe
-C:\ProHC\PEuler\Begin60\E41_Pandigital\obj\Debug\E41_Pandigital.pdb

@@ -1,7 +1,0 @@
-C:\ProHC\PEuler\Multiples35\Multiples35\bin\Debug\Multiples35.exe.config
-C:\ProHC\PEuler\Multiples35\Multiples35\bin\Debug\Multiples35.exe
-C:\ProHC\PEuler\Multiples35\Multiples35\bin\Debug\Multiples35.pdb
-C:\ProHC\PEuler\Multiples35\Multiples35\obj\Debug\Multiples35.csprojAssemblyReference.cache
-C:\ProHC\PEuler\Multiples35\Multiples35\obj\Debug\Multiples35.csproj.CoreCompileInputs.cache
-C:\ProHC\PEuler\Multiples35\Multiples35\obj\Debug\Multiples35.exe
-C:\ProHC\PEuler\Multiples35\Multiples35\obj\Debug\Multiples35.pdb
