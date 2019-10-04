@@ -1,2 +1,2 @@
 # ProjectEular
-Solution for the problems of Project Euler by C# 
+Solution for the problem 1 to 60 of Project Euler by C# 
