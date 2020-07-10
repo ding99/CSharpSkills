@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E41_Pandigital", "E41_Pandi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E51_PrimeDigit", "E51_PrimeDigit\E51_PrimeDigit.csproj", "{9C341969-EF55-4E64-AB23-C62FD5E08420}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilities", "Utilities", "{678FB64F-0B8A-4EDA-8B28-E57430EF7C5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Numbers", "Utilities\Numbers\Numbers.csproj", "{1A8A7DDE-2557-4C46-8B24-E34F22C9EEBB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,9 +49,16 @@ Global
 		{9C341969-EF55-4E64-AB23-C62FD5E08420}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C341969-EF55-4E64-AB23-C62FD5E08420}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C341969-EF55-4E64-AB23-C62FD5E08420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A8A7DDE-2557-4C46-8B24-E34F22C9EEBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A8A7DDE-2557-4C46-8B24-E34F22C9EEBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A8A7DDE-2557-4C46-8B24-E34F22C9EEBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A8A7DDE-2557-4C46-8B24-E34F22C9EEBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1A8A7DDE-2557-4C46-8B24-E34F22C9EEBB} = {678FB64F-0B8A-4EDA-8B28-E57430EF7C5B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9F733D50-EA60-496D-BD42-6EC72EEBBA55}
