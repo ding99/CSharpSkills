@@ -2,7 +2,7 @@
 
 namespace Problems21_30
 {
-	public class Class1
+	public class AmicableNumbers
 	{
 	}
 }

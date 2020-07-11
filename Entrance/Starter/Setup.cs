@@ -146,6 +146,12 @@ namespace Starter
 
 			#region 21-30
 			page = new Page() { Title = "Euler Problems 21-30" };
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(AmicableNumbers),
+				Method = "Start",
+				Description = "Amicable Numbers"
+			});
 			menu.Pages.Add(page);
 			#endregion
 
