@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Problems01_10
 {
-	public class LongestCollatzSequence
+	public class SummationOfPrimes
 	{
 		IList<int> primes;
 
