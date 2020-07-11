@@ -72,8 +72,9 @@ namespace Starter
 			{
 				Type = typeof(LongestCollatzSequence),
 				Method = "Sum",
-				Description = "Longest Collatz Sequence"
-			});
+				Description = "Longest Collatz Sequence",
+				Comment = "Time-consuming"
+			}) ;
 			menu.Pages.Add(page);
 			#endregion
 
