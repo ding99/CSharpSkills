@@ -85,6 +85,60 @@ namespace Starter
 				Method = "Start",
 				Description = "Largest Product In A Grid"
 			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(HighlyDivisibleTriangularNumber),
+				Method = "Start",
+				Description = "Highly Divisible Triangular Number"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(HighlyDivisibleTriangularNumber),
+				Method = "Start",
+				Description = "Highly Divisible Triangular Number"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(HighlyDivisibleTriangularNumber),
+				Method = "Start",
+				Description = "Highly Divisible Triangular Number"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(HighlyDivisibleTriangularNumber),
+				Method = "Start",
+				Description = "Highly Divisible Triangular Number"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(HighlyDivisibleTriangularNumber),
+				Method = "Start",
+				Description = "Highly Divisible Triangular Number"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(HighlyDivisibleTriangularNumber),
+				Method = "Start",
+				Description = "Highly Divisible Triangular Number"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(HighlyDivisibleTriangularNumber),
+				Method = "Start",
+				Description = "Highly Divisible Triangular Number"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(HighlyDivisibleTriangularNumber),
+				Method = "Start",
+				Description = "Highly Divisible Triangular Number"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(HighlyDivisibleTriangularNumber),
+				Method = "Start",
+				Description = "Highly Divisible Triangular Number"
+			});
 			menu.Pages.Add(page);
 			#endregion
 
