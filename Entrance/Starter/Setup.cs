@@ -152,6 +152,60 @@ namespace Starter
 				Method = "Start",
 				Description = "Amicable Numbers"
 			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(AmicableNumbers),
+				Method = "Start",
+				Description = "Amicable Numbers"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(AmicableNumbers),
+				Method = "Start",
+				Description = "Amicable Numbers"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(AmicableNumbers),
+				Method = "Start",
+				Description = "Amicable Numbers"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(AmicableNumbers),
+				Method = "Start",
+				Description = "Amicable Numbers"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(AmicableNumbers),
+				Method = "Start",
+				Description = "Amicable Numbers"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(AmicableNumbers),
+				Method = "Start",
+				Description = "Amicable Numbers"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(AmicableNumbers),
+				Method = "Start",
+				Description = "Amicable Numbers"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(AmicableNumbers),
+				Method = "Start",
+				Description = "Amicable Numbers"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(AmicableNumbers),
+				Method = "Start",
+				Description = "Amicable Numbers"
+			});
 			menu.Pages.Add(page);
 			#endregion
 
