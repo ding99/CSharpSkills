@@ -342,6 +342,66 @@ namespace Starter
 
 			#region 51-60
 			page = new Page() { Title = "Euler Problems 51-60" };
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PrimeDigitReplacements),
+				Method = "Start",
+				Description = "Prime Digit Replacements"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PermutedMultiples),
+				Method = "Start",
+				Description = "Permuted Multiples"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(CombinatoricSelections),
+				Method = "Start",
+				Description = "Combinatoric Selections"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PokerHands),
+				Method = "Start",
+				Description = "Poker Hands"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(LychrelNumbers),
+				Method = "Start",
+				Description = "Lychrel Numbers"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PowerfulDigitSum),
+				Method = "Start",
+				Description = "Powerful Digit Sum"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(SquareRootConvergents),
+				Method = "Start",
+				Description = "Square Root Convergents"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(SpiralPrimes),
+				Method = "Start",
+				Description = "Spiral Primes"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(XORDecryption),
+				Method = "Start",
+				Description = "XOR Decryption"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PrimePairSets),
+				Method = "Start",
+				Description = "Prime Pair Sets"
+			});
 			menu.Pages.Add(page);
 			#endregion
 
