@@ -1,24 +1,24 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
-using System.Reflection;
+using System.IO;
 
 namespace Problems61_70
 {
 	public class MaximumPathSumII
 	{
-		private int size;
+		private const string FILE = "p067_triangle.dat";
+		private const int SIZE = 100;
+
 		private List<int[]> triangle;
 
 		public MaximumPathSumII()
 		{
-			size = 100;
-			string file = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName, "Data\\p067_triangle.txt");
-			string[] input = new string[size];
+			string file = Paths.Paths.DataPath(FILE);
+			string[] input = new string[SIZE];
 
 			using (StreamReader sr = new StreamReader(file))
 			{
-				for (int i = 0; i < size; i++)
+				for (int i = 0; i < SIZE; i++)
 					input[i] = sr.ReadLine();
 				sr.Close();
 				sr.Dispose();
@@ -26,7 +26,7 @@ namespace Problems61_70
 
 			triangle = new List<int[]>();
 
-			for (int k = size - 1; k >= 0; k--)
+			for (int k = SIZE - 1; k >= 0; k--)
 			{
 				string[] row = input[k].Split(' ');
 				int[] data = new int[row.Length];
@@ -42,7 +42,7 @@ namespace Problems61_70
 			orig.AddRange(triangle[0]);
 			int length;
 
-			for (int i = 1; i < size; i++)
+			for (int i = 1; i < SIZE; i++)
 			{
 				next = new List<int>();
 				length = triangle[i].Length;
