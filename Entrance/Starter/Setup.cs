@@ -277,6 +277,66 @@ namespace Starter
 
 			#region 41-50
 			page = new Page() { Title = "Euler Problems 41-50" };
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PandigitalPrime),
+				Method = "Start",
+				Description = "Pandigital Prime"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(CodedTriangleNumbers),
+				Method = "Start",
+				Description = "Coded Triangle Numbers"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(SubStringDivisibility),
+				Method = "Start",
+				Description = "Sub-String Divisibility"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PentagonNumbers),
+				Method = "Start",
+				Description = "Pentagon Numbers"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(TriangularPentagonalAndHexagonal),
+				Method = "Start",
+				Description = "Triangular, Pentagonal And Hexagonal"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PandigitalPrime),
+				Method = "Start",
+				Description = "Pandigital Prime"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PandigitalPrime),
+				Method = "Start",
+				Description = "Pandigital Prime"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PandigitalPrime),
+				Method = "Start",
+				Description = "Pandigital Prime"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PandigitalPrime),
+				Method = "Start",
+				Description = "Pandigital Prime"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PandigitalPrime),
+				Method = "Start",
+				Description = "Pandigital Prime"
+			});
 			menu.Pages.Add(page);
 			#endregion
 
