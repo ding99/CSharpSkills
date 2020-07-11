@@ -23,7 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entrance", "Entrance", "{95
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Starter", "Entrance\Starter\Starter.csproj", "{C2990817-9027-4902-BE8A-2C4FDD307239}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Calcultors", "Calcultors", "{394B3533-54EF-4A5A-AD66-E78104B50AEA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Calculators", "Calculators", "{394B3533-54EF-4A5A-AD66-E78104B50AEA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problems01_10", "Calculators\Problems01_10\Problems01_10.csproj", "{18211B6E-1CDE-4F0E-B68D-B222A1D5AAA1}"
 EndProject
