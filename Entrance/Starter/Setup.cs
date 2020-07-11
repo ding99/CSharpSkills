@@ -380,27 +380,27 @@ namespace Starter
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(PrimeDigitReplacements),
+				Type = typeof(SquareRootConvergents),
 				Method = "Start",
-				Description = "Prime Digit Replacements"
+				Description = "Square Root Convergents"
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(PrimeDigitReplacements),
+				Type = typeof(SpiralPrimes),
 				Method = "Start",
-				Description = "Prime Digit Replacements"
+				Description = "Spiral Primes"
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(PrimeDigitReplacements),
+				Type = typeof(XORDecryption),
 				Method = "Start",
-				Description = "Prime Digit Replacements"
+				Description = "XOR Decryption"
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(PrimeDigitReplacements),
+				Type = typeof(PrimePairSets),
 				Method = "Start",
-				Description = "Prime Digit Replacements"
+				Description = "Prime Pair Sets"
 			});
 			menu.Pages.Add(page);
 			#endregion
