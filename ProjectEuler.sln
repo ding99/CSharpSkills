@@ -27,15 +27,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Calculators", "Calculators"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problems01_10", "Calculators\Problems01_10\Problems01_10.csproj", "{18211B6E-1CDE-4F0E-B68D-B222A1D5AAA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problems11_20", "Calculators\Problems11_20\Problems11_20.csproj", "{B5510D47-CEDE-45AF-AD47-D44CBB889889}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problems11_20", "Calculators\Problems11_20\Problems11_20.csproj", "{B5510D47-CEDE-45AF-AD47-D44CBB889889}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problems21_30", "Calculators\Problems21_30\Problems21_30.csproj", "{26A96374-AFE4-4516-A484-B75C9358AF40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problems21_30", "Calculators\Problems21_30\Problems21_30.csproj", "{26A96374-AFE4-4516-A484-B75C9358AF40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problems31_40", "Calculators\Problems31_40\Problems31_40.csproj", "{966237D6-D08B-4D27-8ED4-4C1ECA9E5C22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problems31_40", "Calculators\Problems31_40\Problems31_40.csproj", "{966237D6-D08B-4D27-8ED4-4C1ECA9E5C22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problems41_50", "Calculators\Problems41_50\Problems41_50.csproj", "{6D113D0B-6FF9-439E-B64A-A90358850B5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problems41_50", "Calculators\Problems41_50\Problems41_50.csproj", "{6D113D0B-6FF9-439E-B64A-A90358850B5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problems51_60", "Calculators\Problems51_60\Problems51_60.csproj", "{E2C82CD8-8E28-42E1-AE94-66627F455240}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problems51_60", "Calculators\Problems51_60\Problems51_60.csproj", "{E2C82CD8-8E28-42E1-AE94-66627F455240}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problems61_70", "Calculators\Problems61_70\Problems61_70.csproj", "{3677D2BD-FF47-4AD3-A61B-81A681A29952}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{649E06D8-FD1A-4E99-97D2-B4321A1A7CE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +103,10 @@ Global
 		{E2C82CD8-8E28-42E1-AE94-66627F455240}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2C82CD8-8E28-42E1-AE94-66627F455240}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2C82CD8-8E28-42E1-AE94-66627F455240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3677D2BD-FF47-4AD3-A61B-81A681A29952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3677D2BD-FF47-4AD3-A61B-81A681A29952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3677D2BD-FF47-4AD3-A61B-81A681A29952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3677D2BD-FF47-4AD3-A61B-81A681A29952}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -112,6 +120,7 @@ Global
 		{966237D6-D08B-4D27-8ED4-4C1ECA9E5C22} = {394B3533-54EF-4A5A-AD66-E78104B50AEA}
 		{6D113D0B-6FF9-439E-B64A-A90358850B5C} = {394B3533-54EF-4A5A-AD66-E78104B50AEA}
 		{E2C82CD8-8E28-42E1-AE94-66627F455240} = {394B3533-54EF-4A5A-AD66-E78104B50AEA}
+		{3677D2BD-FF47-4AD3-A61B-81A681A29952} = {394B3533-54EF-4A5A-AD66-E78104B50AEA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9F733D50-EA60-496D-BD42-6EC72EEBBA55}
