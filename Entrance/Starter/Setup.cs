@@ -212,6 +212,66 @@ namespace Starter
 
 			#region 31-40
 			page = new Page() { Title = "Euler Problems 31-40" };
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(CoinSums),
+				Method = "Start",
+				Description = "Coin Sums"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PandigitalProducts),
+				Method = "Start",
+				Description = "Pandigital Products"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(DigitCancellingFractions),
+				Method = "Start",
+				Description = "Digit Cancelling Fractions"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(DigitFactorials),
+				Method = "Start",
+				Description = "Digit Factorials"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(CircularPrimes),
+				Method = "Start",
+				Description = "Circular Primes"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(DoubleBasePalindromes),
+				Method = "Start",
+				Description = "Double-Base Palindromes"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(TruncatablePrimes),
+				Method = "Start",
+				Description = "Truncatable Primes"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PandigitalMultiples),
+				Method = "Start",
+				Description = "Pandigital Multiples"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(IntegerRightTriangles),
+				Method = "Start",
+				Description = "Integer Right Triangles"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(ChampernownesConstant),
+				Method = "Start",
+				Description = "Champernowne's Constant"
+			});
 			menu.Pages.Add(page);
 			#endregion
 
