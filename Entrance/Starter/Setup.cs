@@ -71,6 +71,12 @@ namespace Starter
 			menu.Pages.Add(page);
 
 			page = new Page() { Title = "Euler Problems 11-20" };
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(LargestProductInAGrid),
+				Method = "Start",
+				Description = "Largest Product In A Grid"
+			});
 			menu.Pages.Add(page);
 
 			page = new Page() { Title = "Euler Problems 21-30" };
