@@ -162,7 +162,8 @@ namespace Starter
 			{
 				Type = typeof(NonAbundantSums),
 				Method = "Start",
-				Description = "Non-Abundant Sums"
+				Description = "Non-Abundant Sums",
+				Comment = "Time-consuming"
 			});
 			page.Problems.Add(new Problem
 			{
@@ -186,7 +187,8 @@ namespace Starter
 			{
 				Type = typeof(QuadraticPrimes),
 				Method = "Start",
-				Description = "Quadratic Primes"
+				Description = "Quadratic Primes",
+				Comment = "Time-consuming"
 			});
 			page.Problems.Add(new Problem
 			{
@@ -251,7 +253,8 @@ namespace Starter
 			{
 				Type = typeof(TruncatablePrimes),
 				Method = "Start",
-				Description = "Truncatable Primes"
+				Description = "Truncatable Primes",
+				Comment = "Time-consuming"
 			});
 			page.Problems.Add(new Problem
 			{
@@ -298,7 +301,8 @@ namespace Starter
 			{
 				Type = typeof(PentagonNumbers),
 				Method = "Start",
-				Description = "Pentagon Numbers"
+				Description = "Pentagon Numbers",
+				Comment = "Time-consuming"
 			});
 			page.Problems.Add(new Problem
 			{
@@ -334,7 +338,8 @@ namespace Starter
 			{
 				Type = typeof(ConsecutivePrimeSum),
 				Method = "Start",
-				Description = "Consecutive Prime Sum"
+				Description = "Consecutive Prime Sum",
+				Comment = "Time-consuming"
 			});
 			menu.Pages.Add(page);
 			#endregion

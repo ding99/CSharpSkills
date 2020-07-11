@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+//Time-consuming, to double check
+
 namespace Problems41_50
 {
 	public class ConsecutivePrimeSum
