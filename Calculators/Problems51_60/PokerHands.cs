@@ -26,7 +26,7 @@ namespace Problems51_60
 
 	public class PokerHands
 	{
-		private const string FILE = "p054_poker.doc";
+		private const string FILE = "p054_poker.dat";
 
 		private List<List<Card>> play1, play2;
 
