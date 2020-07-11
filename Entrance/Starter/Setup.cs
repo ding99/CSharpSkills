@@ -103,6 +103,7 @@ namespace Starter
 				Type = typeof(LongestCollatzSequence),
 				Method = "Start",
 				Description = "Longest Collatz Sequence",
+				Comment = "Time-consuming"
 			});
 			page.Problems.Add(new Problem
 			{
