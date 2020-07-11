@@ -309,33 +309,33 @@ namespace Starter
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(PandigitalPrime),
+				Type = typeof(GoldbachsOtherConjecture),
 				Method = "Start",
-				Description = "Pandigital Prime"
+				Description = "Goldbach's Other Conjecture"
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(PandigitalPrime),
+				Type = typeof(DistinctPrimesFactors),
 				Method = "Start",
-				Description = "Pandigital Prime"
+				Description = "Distinct PrimesFactors"
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(PandigitalPrime),
+				Type = typeof(SelfPowers),
 				Method = "Start",
-				Description = "Pandigital Prime"
+				Description = "Self Powers"
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(PandigitalPrime),
+				Type = typeof(PrimePermutations),
 				Method = "Start",
-				Description = "Pandigital Prime"
+				Description = "Prime Permutations"
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(PandigitalPrime),
+				Type = typeof(ConsecutivePrimeSum),
 				Method = "Start",
-				Description = "Pandigital Prime"
+				Description = "Consecutive Prime Sum"
 			});
 			menu.Pages.Add(page);
 			#endregion
