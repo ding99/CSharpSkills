@@ -70,9 +70,8 @@ namespace Starter
 
 		private void Calculation(Problem p)
 		{
-			Console.WriteLine("Calculating...");
-			Console.WriteLine();
 			Console.WriteLine(p.Description);
+			Console.WriteLine("Calculating...");
 
 			try
 			{
