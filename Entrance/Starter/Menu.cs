@@ -28,5 +28,6 @@ namespace Starter
 		public Type Type { set; get; }
 		public string Method { set; get; }
 		public string Description { set; get; }
+		public string Comment { set; get; }
 	}
 }

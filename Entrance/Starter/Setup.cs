@@ -72,8 +72,9 @@ namespace Starter
 			{
 				Type = typeof(LongestCollatzSequence),
 				Method = "Sum",
-				Description = "Longest Collatz Sequence"
-			});
+				Description = "Longest Collatz Sequence",
+				Comment = "Time-consuming"
+			}) ;
 			menu.Pages.Add(page);
 			#endregion
 
@@ -93,51 +94,52 @@ namespace Starter
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(HighlyDivisibleTriangularNumber),
+				Type = typeof(LargeSum),
 				Method = "Start",
-				Description = "Highly Divisible Triangular Number"
+				Description = "Large Sum"
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(HighlyDivisibleTriangularNumber),
+				Type = typeof(LongestCollatzSequence),
 				Method = "Start",
-				Description = "Highly Divisible Triangular Number"
+				Description = "Longest Collatz Sequence",
+				Comment = "Time-consuming"
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(HighlyDivisibleTriangularNumber),
+				Type = typeof(LatticePaths),
 				Method = "Start",
-				Description = "Highly Divisible Triangular Number"
+				Description = "Lattice Paths"
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(HighlyDivisibleTriangularNumber),
+				Type = typeof(PowerDigitSum),
 				Method = "Start",
-				Description = "Highly Divisible Triangular Number"
+				Description = "Power Digit Sum"
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(HighlyDivisibleTriangularNumber),
+				Type = typeof(NumberLetterCounts),
 				Method = "Start",
-				Description = "Highly Divisible Triangular Number"
+				Description = "Number Letter Counts"
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(HighlyDivisibleTriangularNumber),
+				Type = typeof(MaximumPathSumI),
 				Method = "Start",
-				Description = "Highly Divisible Triangular Number"
+				Description = "Maximum Path Sum I"
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(HighlyDivisibleTriangularNumber),
+				Type = typeof(CountingSundays),
 				Method = "Start",
-				Description = "Highly Divisible Triangular Number"
+				Description = "Counting Sundays"
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(HighlyDivisibleTriangularNumber),
+				Type = typeof(FactorialSigitSum),
 				Method = "Start",
-				Description = "Highly Divisible Triangular Number"
+				Description = "Factorial Sigit Sum"
 			});
 			menu.Pages.Add(page);
 			#endregion
