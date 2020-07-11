@@ -404,7 +404,8 @@ namespace Starter
 			{
 				Type = typeof(PrimePairSets),
 				Method = "Start",
-				Description = "Prime Pair Sets"
+				Description = "Prime Pair Sets",
+				Comment = "Time-consuming"
 			});
 			menu.Pages.Add(page);
 			#endregion
