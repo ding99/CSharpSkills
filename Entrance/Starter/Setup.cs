@@ -4,6 +4,7 @@ using Problems21_30;
 using Problems31_40;
 using Problems41_50;
 using Problems51_60;
+using Problems61_70;
 
 namespace Starter
 {
@@ -221,6 +222,17 @@ namespace Starter
 
 			#region 51-60
 			page = new Page() { Title = "Euler Problems 51-60" };
+			menu.Pages.Add(page);
+			#endregion
+
+			#region 61-70
+			page = new Page() { Title = "Euler Problems 61-70" };
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(MaximumPathSumII),
+				Method = "Start",
+				Description = "Maximum Path Sum II (Problem 67)"
+			});
 			menu.Pages.Add(page);
 			#endregion
 

@@ -7,14 +7,14 @@ namespace Problems21_30
 {
 	public class NamesScores
 	{
+		private const string File = "p022_names.dat";
 		private List<string> names;
 
 		public NamesScores()
 		{
-			string file = "..\\..\\p022_names.txt";
 			string row;
 
-			using (StreamReader sr = new StreamReader(file))
+			using (StreamReader sr = new StreamReader(Paths.Paths.DataPath(File)))
 			{
 				row = sr.ReadToEnd();
 				sr.Close();
