@@ -1,4 +1,9 @@
 ﻿using Problems01_10;
+using Problems11_20;
+using Problems21_30;
+using Problems31_40;
+using Problems41_50;
+using Problems51_60;
 
 namespace Starter
 {
@@ -9,6 +14,7 @@ namespace Starter
 			Menu menu = new Menu();
 			Page page;
 
+			#region 01-10
 			page = new Page() { Title = "Euler Problems 01-10" };
 			page.Problems.Add(new Problem {
 				Type = typeof(MultiplesOf3And5),
@@ -69,7 +75,9 @@ namespace Starter
 				Description = "Longest Collatz Sequence"
 			});
 			menu.Pages.Add(page);
+			#endregion
 
+			#region 11-20
 			page = new Page() { Title = "Euler Problems 11-20" };
 			page.Problems.Add(new Problem
 			{
@@ -78,18 +86,27 @@ namespace Starter
 				Description = "Largest Product In A Grid"
 			});
 			menu.Pages.Add(page);
+			#endregion
 
+			#region 21-30
 			page = new Page() { Title = "Euler Problems 21-30" };
 			menu.Pages.Add(page);
+			#endregion
 
+			#region 31-40
 			page = new Page() { Title = "Euler Problems 31-40" };
 			menu.Pages.Add(page);
+			#endregion
 
+			#region 41-50
 			page = new Page() { Title = "Euler Problems 41-50" };
 			menu.Pages.Add(page);
+			#endregion
 
+			#region 51-60
 			page = new Page() { Title = "Euler Problems 51-60" };
 			menu.Pages.Add(page);
+			#endregion
 
 			return menu;
 		}
