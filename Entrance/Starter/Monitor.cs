@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Starter
 {
@@ -11,9 +12,9 @@ namespace Starter
 
 				int number = 1;
 				foreach (var page in menu.Pages)
-					Console.WriteLine(number++ + ". " + page.Title);
+					Console.WriteLine(new StringBuilder((number++).ToString()).Append(". ").Append(page.Title).ToString());
 
-				Console.WriteLine(number + ". Exit");
+				Console.WriteLine(new StringBuilder(number.ToString()).Append(". Exit").ToString());
 
 				while (true)
 				{
@@ -38,11 +39,15 @@ namespace Starter
 		{
 			while (true)
 			{
-				Console.WriteLine("-- " + page.Title + " --");
+				Console.WriteLine(new StringBuilder("-- ").Append(page.Title).Append(" --").ToString());
 				int number = 1;
-				foreach (var problem in page.Problems)
-					Console.WriteLine(number++ + ". " + problem.Description);
-				Console.WriteLine(number + ". Exit");
+				foreach (var problem in page.Problems) {
+					var builder = new StringBuilder((number++).ToString()).Append(". ").Append(problem.Description);
+					if (!string.IsNullOrWhiteSpace(problem.Comment))
+						builder.Append(" (").Append(problem.Comment).Append(")");
+					Console.WriteLine(builder.ToString());
+				}
+				Console.WriteLine(new StringBuilder(number.ToString()).Append(". Exit").ToString());
 
 				while (true)
 				{
@@ -65,8 +70,10 @@ namespace Starter
 
 		private void Calculation(Problem p)
 		{
-			Console.WriteLine("Calculating..." + Environment.NewLine);
+			Console.WriteLine("Calculating...");
+			Console.WriteLine();
 			Console.WriteLine(p.Description);
+
 			try
 			{
 				p.Type.GetMethod(p.Method).Invoke(Activator.CreateInstance(p.Type), null);
