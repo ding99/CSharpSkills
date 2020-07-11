@@ -342,6 +342,66 @@ namespace Starter
 
 			#region 51-60
 			page = new Page() { Title = "Euler Problems 51-60" };
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PrimeDigitReplacements),
+				Method = "Start",
+				Description = "Prime Digit Replacements"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PrimeDigitReplacements),
+				Method = "Start",
+				Description = "Prime Digit Replacements"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PrimeDigitReplacements),
+				Method = "Start",
+				Description = "Prime Digit Replacements"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PrimeDigitReplacements),
+				Method = "Start",
+				Description = "Prime Digit Replacements"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PrimeDigitReplacements),
+				Method = "Start",
+				Description = "Prime Digit Replacements"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PrimeDigitReplacements),
+				Method = "Start",
+				Description = "Prime Digit Replacements"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PrimeDigitReplacements),
+				Method = "Start",
+				Description = "Prime Digit Replacements"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PrimeDigitReplacements),
+				Method = "Start",
+				Description = "Prime Digit Replacements"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PrimeDigitReplacements),
+				Method = "Start",
+				Description = "Prime Digit Replacements"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PrimeDigitReplacements),
+				Method = "Start",
+				Description = "Prime Digit Replacements"
+			});
 			menu.Pages.Add(page);
 			#endregion
 
