@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Starter
 {
@@ -11,6 +7,8 @@ namespace Starter
 		public void Start(Menu menu) {
 			while (true)
 			{
+				Console.WriteLine("== Euler Problems Main Menu ==");
+
 				int number = 1;
 				foreach (var page in menu.Pages)
 					Console.WriteLine(number++ + ". " + page.Title);
@@ -40,6 +38,7 @@ namespace Starter
 		{
 			while (true)
 			{
+				Console.WriteLine("-- " + page.Title + " --");
 				int number = 1;
 				foreach (var problem in page.Problems)
 					Console.WriteLine(number++ + ". " + problem.Description);
