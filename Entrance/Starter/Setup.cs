@@ -212,16 +212,196 @@ namespace Starter
 
 			#region 31-40
 			page = new Page() { Title = "Euler Problems 31-40" };
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(CoinSums),
+				Method = "Start",
+				Description = "Coin Sums"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PandigitalProducts),
+				Method = "Start",
+				Description = "Pandigital Products"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(DigitCancellingFractions),
+				Method = "Start",
+				Description = "Digit Cancelling Fractions"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(DigitFactorials),
+				Method = "Start",
+				Description = "Digit Factorials"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(CircularPrimes),
+				Method = "Start",
+				Description = "Circular Primes"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(DoubleBasePalindromes),
+				Method = "Start",
+				Description = "Double-Base Palindromes"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(TruncatablePrimes),
+				Method = "Start",
+				Description = "Truncatable Primes"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PandigitalMultiples),
+				Method = "Start",
+				Description = "Pandigital Multiples"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(IntegerRightTriangles),
+				Method = "Start",
+				Description = "Integer Right Triangles"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(ChampernownesConstant),
+				Method = "Start",
+				Description = "Champernowne's Constant"
+			});
 			menu.Pages.Add(page);
 			#endregion
 
 			#region 41-50
 			page = new Page() { Title = "Euler Problems 41-50" };
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PandigitalPrime),
+				Method = "Start",
+				Description = "Pandigital Prime"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(CodedTriangleNumbers),
+				Method = "Start",
+				Description = "Coded Triangle Numbers"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(SubStringDivisibility),
+				Method = "Start",
+				Description = "Sub-String Divisibility"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PentagonNumbers),
+				Method = "Start",
+				Description = "Pentagon Numbers"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(TriangularPentagonalAndHexagonal),
+				Method = "Start",
+				Description = "Triangular, Pentagonal And Hexagonal"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(GoldbachsOtherConjecture),
+				Method = "Start",
+				Description = "Goldbach's Other Conjecture"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(DistinctPrimesFactors),
+				Method = "Start",
+				Description = "Distinct PrimesFactors"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(SelfPowers),
+				Method = "Start",
+				Description = "Self Powers"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PrimePermutations),
+				Method = "Start",
+				Description = "Prime Permutations"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(ConsecutivePrimeSum),
+				Method = "Start",
+				Description = "Consecutive Prime Sum"
+			});
 			menu.Pages.Add(page);
 			#endregion
 
 			#region 51-60
 			page = new Page() { Title = "Euler Problems 51-60" };
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PrimeDigitReplacements),
+				Method = "Start",
+				Description = "Prime Digit Replacements"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PermutedMultiples),
+				Method = "Start",
+				Description = "Permuted Multiples"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(CombinatoricSelections),
+				Method = "Start",
+				Description = "Combinatoric Selections"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PokerHands),
+				Method = "Start",
+				Description = "Poker Hands"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(LychrelNumbers),
+				Method = "Start",
+				Description = "Lychrel Numbers"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PowerfulDigitSum),
+				Method = "Start",
+				Description = "Powerful Digit Sum"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(SquareRootConvergents),
+				Method = "Start",
+				Description = "Square Root Convergents"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(SpiralPrimes),
+				Method = "Start",
+				Description = "Spiral Primes"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(XORDecryption),
+				Method = "Start",
+				Description = "XOR Decryption"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(PrimePairSets),
+				Method = "Start",
+				Description = "Prime Pair Sets"
+			});
 			menu.Pages.Add(page);
 			#endregion
 
