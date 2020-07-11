@@ -350,33 +350,33 @@ namespace Starter
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(PrimeDigitReplacements),
+				Type = typeof(PermutedMultiples),
 				Method = "Start",
-				Description = "Prime Digit Replacements"
+				Description = "Permuted Multiples"
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(PrimeDigitReplacements),
+				Type = typeof(CombinatoricSelections),
 				Method = "Start",
-				Description = "Prime Digit Replacements"
+				Description = "Combinatoric Selections"
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(PrimeDigitReplacements),
+				Type = typeof(PokerHands),
 				Method = "Start",
-				Description = "Prime Digit Replacements"
+				Description = "Poker Hands"
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(PrimeDigitReplacements),
+				Type = typeof(LychrelNumbers),
 				Method = "Start",
-				Description = "Prime Digit Replacements"
+				Description = "Lychrel Numbers"
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(PrimeDigitReplacements),
+				Type = typeof(PowerfulDigitSum),
 				Method = "Start",
-				Description = "Prime Digit Replacements"
+				Description = "Powerful Digit Sum"
 			});
 			page.Problems.Add(new Problem
 			{
