@@ -146,6 +146,66 @@ namespace Starter
 
 			#region 21-30
 			page = new Page() { Title = "Euler Problems 21-30" };
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(AmicableNumbers),
+				Method = "Start",
+				Description = "Amicable Numbers"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(NamesScores),
+				Method = "Start",
+				Description = "Names Scores"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(NonAbundantSums),
+				Method = "Start",
+				Description = "Non-Abundant Sums"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(LexicographicPermutations),
+				Method = "Start",
+				Description = "Lexicographic Permutations"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(FibonacciNumber1000Digit),
+				Method = "Start",
+				Description = "1000-Digit Fibonacci Number"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(ReciprocalCycles),
+				Method = "Start",
+				Description = "Reciprocal Cycles"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(QuadraticPrimes),
+				Method = "Start",
+				Description = "Quadratic Primes"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(NumberSpiralDiagonals),
+				Method = "Start",
+				Description = "Number Spiral Diagonals"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(DistinctPowers),
+				Method = "Start",
+				Description = "Distinct Powers"
+			});
+			page.Problems.Add(new Problem
+			{
+				Type = typeof(DigitFifthPowers),
+				Method = "Start",
+				Description = "Digit Fifth Powers"
+			});
 			menu.Pages.Add(page);
 			#endregion
 
