@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Problems11_20
 {
-	class LongestCollatzSequence
+	public class LongestCollatzSequence
 	{
 		public void Start()
 		{

@@ -73,7 +73,7 @@ namespace Starter
 			{
 				Type = typeof(SummationOfPrimes),
 				Method = "Sum",
-				Description = "Longest Collatz Sequence",
+				Description = "Summation Of Primes",
 				Comment = "Time-consuming"
 			}) ;
 			menu.Pages.Add(page);
@@ -101,10 +101,9 @@ namespace Starter
 			});
 			page.Problems.Add(new Problem
 			{
-				Type = typeof(SummationOfPrimes),
+				Type = typeof(LongestCollatzSequence),
 				Method = "Start",
-				Description = "Summation Of Primes",
-				Comment = "Time-consuming"
+				Description = "Longest Collatz sequence"
 			});
 			page.Problems.Add(new Problem
 			{
