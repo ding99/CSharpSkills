@@ -35,7 +35,7 @@ namespace Starter
 			}
 		}
 
-		public void StartPage(Page page)
+		private void StartPage(Page page)
 		{
 			while (true)
 			{
