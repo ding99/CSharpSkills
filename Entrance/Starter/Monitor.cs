@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Text;
 
 namespace Starter
@@ -6,8 +7,11 @@ namespace Starter
 	public class Monitor
 	{
 		public void Start(Menu menu) {
+			Console.Title = "Project Euler";
+
 			while (true)
 			{
+				Console.ForegroundColor = ConsoleColor.DarkYellow;
 				Console.WriteLine("== Euler Problems Main Menu ==");
 
 				int number = 1;
@@ -23,7 +27,10 @@ namespace Starter
 					if (int.TryParse(read, out number) && number > 0)
 					{
 						if (number == menu.Pages.Count + 1)
+						{
+							Console.ResetColor();
 							return;
+						}
 
 						if (number <= menu.Pages.Count)
 						{
@@ -39,6 +46,7 @@ namespace Starter
 		{
 			while (true)
 			{
+				Console.ForegroundColor = ConsoleColor.Blue;
 				Console.WriteLine(new StringBuilder("-- ").Append(page.Title).Append(" --").ToString());
 				int number = 1;
 				foreach (var problem in page.Problems) {
@@ -60,6 +68,7 @@ namespace Starter
 
 						if (number <= page.Problems.Count)
 						{
+							Console.ForegroundColor = ConsoleColor.DarkGreen;
 							Calculation(page.Problems[number - 1]);
 							break;
 						}
