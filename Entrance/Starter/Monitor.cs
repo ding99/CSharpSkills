@@ -11,7 +11,7 @@ namespace Starter
 
 			while (true)
 			{
-				Console.ForegroundColor = ConsoleColor.DarkYellow;
+				Console.ForegroundColor = ConsoleColor.Yellow;
 				Console.WriteLine("== Euler Problems Main Menu ==");
 
 				int number = 1;
@@ -46,7 +46,7 @@ namespace Starter
 		{
 			while (true)
 			{
-				Console.ForegroundColor = ConsoleColor.Blue;
+				Console.ForegroundColor = ConsoleColor.Cyan;
 				Console.WriteLine(new StringBuilder("-- ").Append(page.Title).Append(" --").ToString());
 				int number = 1;
 				foreach (var problem in page.Problems) {
@@ -68,7 +68,7 @@ namespace Starter
 
 						if (number <= page.Problems.Count)
 						{
-							Console.ForegroundColor = ConsoleColor.DarkGreen;
+							Console.ForegroundColor = ConsoleColor.Green;
 							Calculation(page.Problems[number - 1]);
 							break;
 						}
