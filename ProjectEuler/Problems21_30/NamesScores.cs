@@ -7,14 +7,13 @@ namespace ProjectEuler.Problems21_30
 {
 	public class NamesScores : SourceSet
 	{
-		private const string File = "p022_names.dat";
+		private const string FILE = "p022_names.dat";
 		private List<string> names;
 
 		public NamesScores()
 		{
 			string row;
-			Console.WriteLine($"path: {Paths.Paths.DataPath(dataPath, File)} / {File}");
-			using (StreamReader sr = new StreamReader(Paths.Paths.DataPath(dataPath, File)))
+			using (StreamReader sr = new StreamReader(Paths.Paths.DataPath(dataPath, FILE)))
 			{
 				row = sr.ReadToEnd();
 				sr.Close();

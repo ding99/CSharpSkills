@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Utilities\Paths\Paths.csproj" />
+    <ProjectReference Include="..\EulerResource\EulerResource.csproj" />
   </ItemGroup>
 
 </Project>
