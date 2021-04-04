@@ -4,7 +4,7 @@ using ProjectEuler.Problems21_30;
 using ProjectEuler.Problems31_40;
 using ProjectEuler.Problems41_50;
 using ProjectEuler.Problems51_60;
-using Problems61_70;
+using ProjectEuler.Problems61_70;
 
 namespace Starter
 {
