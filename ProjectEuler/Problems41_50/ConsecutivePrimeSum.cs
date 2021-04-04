@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 //Time-consuming, to double check
 
-namespace Problems41_50
+namespace ProjectEuler.Problems41_50
 {
 	public class ConsecutivePrimeSum
 	{

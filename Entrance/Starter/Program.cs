@@ -4,9 +4,9 @@ namespace Starter
 {
 	class Program
 	{
-		static void Main(string[] args)
+		static void Main()
 		{
-			Console.WriteLine("Project Eurer");
+			Console.WriteLine("Project Euler");
 			new Monitor().Start(new Setup().SetMenu());
 		}
 	}

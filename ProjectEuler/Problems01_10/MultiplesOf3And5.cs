@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Problems01_10
+namespace ProjectEuler.Problems01_10
 {
 	public class MultiplesOf3And5
 	{

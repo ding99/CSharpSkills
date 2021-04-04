@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Problems51_60
+namespace ProjectEuler.Problems51_60
 {
 	public class SpiralPrimes
 	{

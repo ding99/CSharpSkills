@@ -3,18 +3,18 @@ using System.IO;
 using System.Collections.Generic;
 using System.Numerics;
 
-namespace Problems21_30
+namespace ProjectEuler.Problems21_30
 {
-	public class NamesScores
+	public class NamesScores : SourceSet
 	{
-		private const string File = "DataEuler/p022_names.dat";
+		private const string File = "p022_names.dat";
 		private List<string> names;
 
 		public NamesScores()
 		{
 			string row;
-			Console.WriteLine($"path: {Paths.Paths.DataPath(File)}  / {File}");
-			using (StreamReader sr = new StreamReader(Paths.Paths.DataPath(File)))
+			Console.WriteLine($"path: {Paths.Paths.DataPath(dataPath, File)} / {File}");
+			using (StreamReader sr = new StreamReader(Paths.Paths.DataPath(dataPath, File)))
 			{
 				row = sr.ReadToEnd();
 				sr.Close();

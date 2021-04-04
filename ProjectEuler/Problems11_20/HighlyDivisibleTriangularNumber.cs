@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Problems11_20
+namespace ProjectEuler.Problems11_20
 {
 	public class HighlyDivisibleTriangularNumber
 	{
