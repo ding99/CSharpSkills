@@ -7,13 +7,13 @@ namespace Problems21_30
 {
 	public class NamesScores
 	{
-		private const string File = "p022_names.dat";
+		private const string File = "DataEuler/p022_names.dat";
 		private List<string> names;
 
 		public NamesScores()
 		{
 			string row;
-
+			Console.WriteLine($"path: {Paths.Paths.DataPath(File)}  / {File}");
 			using (StreamReader sr = new StreamReader(Paths.Paths.DataPath(File)))
 			{
 				row = sr.ReadToEnd();
