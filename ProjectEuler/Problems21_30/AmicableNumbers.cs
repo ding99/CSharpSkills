@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Problems21_30
+namespace ProjectEuler.Problems21_30
 {
 	public class APair
 	{

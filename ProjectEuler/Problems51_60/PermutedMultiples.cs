@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Problems51_60
+namespace ProjectEuler.Problems51_60
 {
 	public class PermutedMultiples
 	{

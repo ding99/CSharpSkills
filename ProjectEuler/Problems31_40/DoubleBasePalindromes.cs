@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 
-namespace Problems31_40
+namespace ProjectEuler.Problems31_40
 {
 	public class DoubleBasePalindromes
 	{

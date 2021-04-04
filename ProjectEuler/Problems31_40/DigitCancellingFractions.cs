@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Problems31_40
+namespace ProjectEuler.Problems31_40
 {
 	public class Fraction
 	{

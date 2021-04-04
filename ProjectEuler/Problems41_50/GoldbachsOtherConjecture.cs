@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Problems41_50
+namespace ProjectEuler.Problems41_50
 {
 	public class GoldbachsOtherConjecture
 	{

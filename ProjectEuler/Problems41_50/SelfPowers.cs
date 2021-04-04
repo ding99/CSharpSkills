@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Numerics;
 
-namespace Problems41_50
+namespace ProjectEuler.Problems41_50
 {
 	public class SelfPowers
 	{

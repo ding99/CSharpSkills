@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Problems51_60
+namespace ProjectEuler.Problems51_60
 {
 	public class PrimeDigitReplacements
 	{

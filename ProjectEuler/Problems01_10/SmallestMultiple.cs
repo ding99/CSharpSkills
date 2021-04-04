@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Problems01_10
+namespace ProjectEuler.Problems01_10
 {
 	public class SmallestMultiple
 	{

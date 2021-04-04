@@ -28,15 +28,19 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problems61_70", "ProjectEuler\Problems61_70\Problems61_70.csproj", "{3677D2BD-FF47-4AD3-A61B-81A681A29952}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{649E06D8-FD1A-4E99-97D2-B4321A1A7CE2}"
-	ProjectSection(SolutionItems) = preProject
-		Data\p022_names.dat = Data\p022_names.dat
-		Data\p042_words.dat = Data\p042_words.dat
-		Data\p054_poker.dat = Data\p054_poker.dat
-		Data\p059_cipher.dat = Data\p059_cipher.dat
-		Data\p067_triangle.dat = Data\p067_triangle.dat
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Paths", "Utilities\Paths\Paths.csproj", "{89964F85-E1EB-464B-A4D3-DBD54230263C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataEuler", "DataEuler", "{E1462451-B5A6-43F9-B0E2-EEEF9BFFB57F}"
+	ProjectSection(SolutionItems) = preProject
+		Data\DataEuler\p022_names.dat = Data\DataEuler\p022_names.dat
+		Data\DataEuler\p042_words.dat = Data\DataEuler\p042_words.dat
+		Data\DataEuler\p054_poker.dat = Data\DataEuler\p054_poker.dat
+		Data\DataEuler\p059_cipher.dat = Data\DataEuler\p059_cipher.dat
+		Data\DataEuler\p067_triangle.dat = Data\DataEuler\p067_triangle.dat
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EulerResource", "ProjectEuler\EulerResource\EulerResource.csproj", "{352A81E7-B797-4FD3-80FD-A2A140542451}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -84,6 +88,10 @@ Global
 		{89964F85-E1EB-464B-A4D3-DBD54230263C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89964F85-E1EB-464B-A4D3-DBD54230263C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89964F85-E1EB-464B-A4D3-DBD54230263C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{352A81E7-B797-4FD3-80FD-A2A140542451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{352A81E7-B797-4FD3-80FD-A2A140542451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{352A81E7-B797-4FD3-80FD-A2A140542451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{352A81E7-B797-4FD3-80FD-A2A140542451}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,6 +107,8 @@ Global
 		{E2C82CD8-8E28-42E1-AE94-66627F455240} = {394B3533-54EF-4A5A-AD66-E78104B50AEA}
 		{3677D2BD-FF47-4AD3-A61B-81A681A29952} = {394B3533-54EF-4A5A-AD66-E78104B50AEA}
 		{89964F85-E1EB-464B-A4D3-DBD54230263C} = {678FB64F-0B8A-4EDA-8B28-E57430EF7C5B}
+		{E1462451-B5A6-43F9-B0E2-EEEF9BFFB57F} = {649E06D8-FD1A-4E99-97D2-B4321A1A7CE2}
+		{352A81E7-B797-4FD3-80FD-A2A140542451} = {394B3533-54EF-4A5A-AD66-E78104B50AEA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9F733D50-EA60-496D-BD42-6EC72EEBBA55}

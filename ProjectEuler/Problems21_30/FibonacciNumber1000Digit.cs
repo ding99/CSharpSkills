@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Numerics;
 
-namespace Problems21_30
+namespace ProjectEuler.Problems21_30
 {
 	public class FibonacciNumber1000Digit
 	{

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Problems31_40
+namespace ProjectEuler.Problems31_40
 {
 	public class CoinSums
 	{

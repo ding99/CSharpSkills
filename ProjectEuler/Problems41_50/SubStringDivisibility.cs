@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Numerics;
 
-namespace Problems41_50
+namespace ProjectEuler.Problems41_50
 {
 	public class SubStringDivisibility
 	{

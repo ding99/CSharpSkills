@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Problems21_30
+namespace ProjectEuler.Problems21_30
 {
 	public class DigitFifthPowers
 	{

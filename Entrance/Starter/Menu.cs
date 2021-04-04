@@ -6,9 +6,15 @@ namespace Starter
 	public class Menu
 	{
 		public IList<Page> Pages;
+		public string DataPath;
 
-		public Menu()
+		public Menu(string path)
 		{
+			Pages = new List<Page>();
+			DataPath = path;
+		}
+
+		public Menu() {
 			Pages = new List<Page>();
 		}
 	}

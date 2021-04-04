@@ -1,10 +1,10 @@
-﻿using Problems01_10;
-using Problems11_20;
-using Problems21_30;
-using Problems31_40;
-using Problems41_50;
-using Problems51_60;
-using Problems61_70;
+﻿using ProjectEuler.Problems01_10;
+using ProjectEuler.Problems11_20;
+using ProjectEuler.Problems21_30;
+using ProjectEuler.Problems31_40;
+using ProjectEuler.Problems41_50;
+using ProjectEuler.Problems51_60;
+using ProjectEuler.Problems61_70;
 
 namespace Starter
 {
@@ -12,7 +12,7 @@ namespace Starter
 	{
 		public Menu SetMenu()
 		{
-			Menu menu = new Menu();
+			Menu menu = new Menu("DataEuler");
 			Page page;
 
 			#region 01-10
