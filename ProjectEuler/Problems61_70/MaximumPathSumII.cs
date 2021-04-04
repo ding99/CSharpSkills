@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace Problems61_70
+namespace ProjectEuler.Problems61_70
 {
-	public class MaximumPathSumII
+	public class MaximumPathSumII : SourceSet
 	{
 		private const string FILE = "p067_triangle.dat";
 		private const int SIZE = 100;
@@ -13,7 +13,7 @@ namespace Problems61_70
 
 		public MaximumPathSumII()
 		{
-			string file = Paths.Paths.DataPath(FILE);
+			string file = Paths.Paths.DataPath(dataPath, FILE);
 			string[] input = new string[SIZE];
 
 			using (StreamReader sr = new StreamReader(file))

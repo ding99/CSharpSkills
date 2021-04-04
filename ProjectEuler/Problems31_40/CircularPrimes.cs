@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Problems31_40
+namespace ProjectEuler.Problems31_40
 {
 	public class CircularPrimes
 	{

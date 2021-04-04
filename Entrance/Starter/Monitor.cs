@@ -6,8 +6,11 @@ namespace Starter
 {
 	public class Monitor
 	{
+		private string dataPath;
+
 		public void Start(Menu menu) {
 			Console.Title = "Project Euler";
+			dataPath = menu.DataPath;
 
 			while (true)
 			{
