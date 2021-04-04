@@ -3,7 +3,7 @@ using System.IO;
 
 namespace ProjectEuler.Problems51_60
 {
-	public class XORDecryption
+	public class XORDecryption : SourceSet
 	{
 		private const string FILE = "p059_cipher.dat";
 
@@ -14,7 +14,7 @@ namespace ProjectEuler.Problems51_60
 		{
 			string line;
 
-			using (StreamReader sr = new StreamReader(Paths.Paths.DataPath(FILE)))
+			using (StreamReader sr = new StreamReader(Paths.Paths.DataPath(dataPath, FILE)))
 			{
 				line = sr.ReadToEnd();
 				sr.Close();

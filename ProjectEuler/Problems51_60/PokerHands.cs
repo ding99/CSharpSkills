@@ -24,7 +24,7 @@ namespace ProjectEuler.Problems51_60
 		RoyalFlush
 	}
 
-	public class PokerHands
+	public class PokerHands : SourceSet
 	{
 		private const string FILE = "p054_poker.dat";
 
@@ -37,7 +37,7 @@ namespace ProjectEuler.Problems51_60
 
 			string[] terms;
 
-			using (StreamReader r = new StreamReader(Paths.Paths.DataPath(FILE)))
+			using (StreamReader r = new StreamReader(Paths.Paths.DataPath(dataPath, FILE)))
 			{
 				while (!r.EndOfStream)
 				{

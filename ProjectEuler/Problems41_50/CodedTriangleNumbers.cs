@@ -4,7 +4,7 @@ using System.IO;
 
 namespace ProjectEuler.Problems41_50
 {
-	public class CodedTriangleNumbers
+	public class CodedTriangleNumbers : SourceSet
 	{
 		private const string FILE = "p042_words.dat";
 		private List<string> words;
@@ -13,7 +13,7 @@ namespace ProjectEuler.Problems41_50
 		public CodedTriangleNumbers()
 		{
 			words = new List<string>();
-			using (StreamReader sr = new StreamReader(Paths.Paths.DataPath(FILE)))
+			using (StreamReader sr = new StreamReader(Paths.Paths.DataPath(dataPath, FILE)))
 			{
 				foreach (var a in sr.ReadToEnd().Split(','))
 					words.Add(a.Trim(new char[] { '"' }).ToUpper());
