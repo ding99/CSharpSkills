@@ -39,7 +39,12 @@ namespace Starter
 			page.Problems.Add(new Problem {
 				Type = typeof(TwoSum),
 				Method = "Start",
-				Description = "Indices of Two Numbers to Add Up to Target."
+				Description = "Indices of Two Numbers to Add Up to Target"
+			});
+			page.Problems.Add(new Problem {
+				Type = typeof(LongestSub),
+				Method = "Start",
+				Description = "Find the Longest Substring without Repeating Characters"
 			});
 			web.Pages.Add(page);
 			#endregion
