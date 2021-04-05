@@ -1,20 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Utilities.Characters;
 
 namespace LeetCode.Leet01_10 {
 	public class LongestPalindromicSub {
 		public void Start() {
 			Action("babad");
+			Action("cbbd");
+			Action("a");
+			Action("ac");
 			Action(string.Empty);
 		}
 
 		private void Action(string s) {
 			Console.WriteLine($"Input: s = \"{s}\"");
 			string p = s;
-			int size = s.Length, max = p.Length;
-			Console.WriteLine($"size ({size})");
+			int size = s.Length, max;
 
 			if (size > 1) {
 				p = s.Substring(0, 1);
