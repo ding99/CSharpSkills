@@ -1,21 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace LeetCode.Leet01_10 {
 	public class LongestSub {
 		public void Start() {
-			testing();
 			Search("abcabcbb");
 			Search("bbbb");
 			Search("pwwkew");
 			Search("");
-		}
-
-		private void testing() {
-			string s = "abcdefg";
-			Console.WriteLine(s);
-			Console.WriteLine($"{s.IndexOf("f")}, {s.IndexOf("f", 1)}, {s.IndexOf("f", 3)}");
+			Search("c");
 		}
 
 		private void Search(string s) {
