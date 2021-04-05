@@ -42,6 +42,11 @@ namespace Starter
 				Method = "Start",
 				Description = "Median of Sorted Arrays"
 			});
+			page.Problems.Add(new Problem {
+				Type = typeof(LongestPalindromicSub),
+				Method = "Start",
+				Description = "Longest Palindromic Substring"
+			});
 			web.Pages.Add(page);
 			#endregion
 			menu.Webs.Add(web);
