@@ -51,33 +51,33 @@
       <Project>{9e0ac411-2daf-4376-a7e3-d4f613d7f5a2}</Project>
       <Name>Leet01_10</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\ProjectEuler\Problems01_10\Problems01_10.csproj">
+    <ProjectReference Include="..\..\ProjectEuler\Problems01_10\Euler01_10.csproj">
       <Project>{18211b6e-1cde-4f0e-b68d-b222a1d5aaa1}</Project>
-      <Name>Problems01_10</Name>
+      <Name>Euler01_10</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\ProjectEuler\Problems11_20\Problems11_20.csproj">
+    <ProjectReference Include="..\..\ProjectEuler\Problems11_20\Euler11_20.csproj">
       <Project>{b5510d47-cede-45af-ad47-d44cbb889889}</Project>
-      <Name>Problems11_20</Name>
+      <Name>Euler11_20</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\ProjectEuler\Problems21_30\Problems21_30.csproj">
+    <ProjectReference Include="..\..\ProjectEuler\Problems21_30\Euler21_30.csproj">
       <Project>{26a96374-afe4-4516-a484-b75c9358af40}</Project>
-      <Name>Problems21_30</Name>
+      <Name>Euler21_30</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\ProjectEuler\Problems31_40\Problems31_40.csproj">
+    <ProjectReference Include="..\..\ProjectEuler\Problems31_40\Euler31_40.csproj">
       <Project>{966237d6-d08b-4d27-8ed4-4c1eca9e5c22}</Project>
-      <Name>Problems31_40</Name>
+      <Name>Euler31_40</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\ProjectEuler\Problems41_50\Problems41_50.csproj">
+    <ProjectReference Include="..\..\ProjectEuler\Problems41_50\Euler41_50.csproj">
       <Project>{6d113d0b-6ff9-439e-b64a-a90358850b5c}</Project>
-      <Name>Problems41_50</Name>
+      <Name>Euler41_50</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\ProjectEuler\Problems51_60\Problems51_60.csproj">
+    <ProjectReference Include="..\..\ProjectEuler\Problems51_60\Euler51_60.csproj">
       <Project>{e2c82cd8-8e28-42e1-ae94-66627f455240}</Project>
-      <Name>Problems51_60</Name>
+      <Name>Euler51_60</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\ProjectEuler\Problems61_70\Problems61_70.csproj">
+    <ProjectReference Include="..\..\ProjectEuler\Problems61_70\Euler61_70.csproj">
       <Project>{3677d2bd-ff47-4ad3-a61b-81a681a29952}</Project>
-      <Name>Problems61_70</Name>
+      <Name>Euler61_70</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
