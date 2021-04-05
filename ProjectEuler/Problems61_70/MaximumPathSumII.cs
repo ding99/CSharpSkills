@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace ProjectEuler.Problems61_70
+namespace ProjectEuler.Euler61_70
 {
 	public class MaximumPathSumII : SourceSet
 	{

@@ -1,10 +1,10 @@
-﻿using ProjectEuler.Problems01_10;
-using ProjectEuler.Problems11_20;
-using ProjectEuler.Problems21_30;
-using ProjectEuler.Problems31_40;
-using ProjectEuler.Problems41_50;
-using ProjectEuler.Problems51_60;
-using ProjectEuler.Problems61_70;
+﻿using ProjectEuler.Euler01_10;
+using ProjectEuler.Euler11_20;
+using ProjectEuler.Euler21_30;
+using ProjectEuler.Euler31_40;
+using ProjectEuler.Euler41_50;
+using ProjectEuler.Euler51_60;
+using ProjectEuler.Euler61_70;
 using LeetCode.Leet01_10;
 using Assessment.Filtered;
 

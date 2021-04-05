@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 
-namespace ProjectEuler.Problems51_60
+namespace ProjectEuler.Euler51_60
 {
 	public class PrimePairSets
 	{

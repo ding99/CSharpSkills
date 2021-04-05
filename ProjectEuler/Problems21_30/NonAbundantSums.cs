@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ProjectEuler.Problems21_30
+namespace ProjectEuler.Euler21_30
 {
 	public class NonAbundantSums
 	{

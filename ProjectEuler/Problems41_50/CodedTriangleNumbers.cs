@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace ProjectEuler.Problems41_50
+namespace ProjectEuler.Euler41_50
 {
 	public class CodedTriangleNumbers : SourceSet
 	{

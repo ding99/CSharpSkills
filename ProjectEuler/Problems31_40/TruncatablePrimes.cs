@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ProjectEuler.Problems31_40
+namespace ProjectEuler.Euler31_40
 {
 	public class TruncatablePrimes
 	{

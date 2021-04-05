@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ProjectEuler.Problems01_10
+namespace ProjectEuler.Euler01_10
 {
 	public class LargestPrimeFactor
 	{

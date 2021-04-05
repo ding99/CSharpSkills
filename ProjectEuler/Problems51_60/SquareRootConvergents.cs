@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Numerics;
 
-namespace ProjectEuler.Problems51_60
+namespace ProjectEuler.Euler51_60
 {
 	public class SquareRootConvergents
 	{

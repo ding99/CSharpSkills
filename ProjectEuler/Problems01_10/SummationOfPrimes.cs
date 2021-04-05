@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProjectEuler.Problems01_10
+namespace ProjectEuler.Euler01_10
 {
 	public class SummationOfPrimes
 	{

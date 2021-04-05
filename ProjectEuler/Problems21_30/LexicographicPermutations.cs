@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProjectEuler.Problems21_30
+namespace ProjectEuler.Euler21_30
 {
 	public class LexicographicPermutations
 	{

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Numerics;
 
-namespace ProjectEuler.Problems11_20
+namespace ProjectEuler.Euler11_20
 {
 	public class FactorialSigitSum
 	{

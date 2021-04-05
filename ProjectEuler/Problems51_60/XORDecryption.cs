@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace ProjectEuler.Problems51_60
+namespace ProjectEuler.Euler51_60
 {
 	public class XORDecryption : SourceSet
 	{
