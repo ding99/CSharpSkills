@@ -4,4 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Utilities\Characters\Characters.csproj" />
+    <ProjectReference Include="..\..\Utilities\Numbers\Numbers.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -35,7 +35,17 @@ namespace Starter
 			page.Problems.Add(new Problem {
 				Type = typeof(LongestSub),
 				Method = "Start",
-				Description = "Find the Longest Substring without Repeating Characters"
+				Description = "Longest Substring without Repeating Characters"
+			});
+			page.Problems.Add(new Problem {
+				Type = typeof(MedianOfArrays),
+				Method = "Start",
+				Description = "Median of Sorted Arrays"
+			});
+			page.Problems.Add(new Problem {
+				Type = typeof(LongestPalindromicSub),
+				Method = "Start",
+				Description = "Longest Palindromic Substring"
 			});
 			web.Pages.Add(page);
 			#endregion

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Numbers
+namespace Utilities.Numbers
 {
 	public class Primes
 	{
