@@ -42,6 +42,11 @@ namespace Starter
 				Description = "Indices of Two Numbers to Add Up to Target"
 			});
 			page.Problems.Add(new Problem {
+				Type = typeof(AddNumbers),
+				Method = "Start",
+				Description = "Add LinkedLists"
+			});
+			page.Problems.Add(new Problem {
 				Type = typeof(LongestSub),
 				Method = "Start",
 				Description = "Find the Longest Substring without Repeating Characters"
