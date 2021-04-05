@@ -5,6 +5,7 @@ using ProjectEuler.Problems31_40;
 using ProjectEuler.Problems41_50;
 using ProjectEuler.Problems51_60;
 using ProjectEuler.Problems61_70;
+using LeetCode.Leet01_10;
 
 namespace Starter
 {
@@ -12,11 +13,28 @@ namespace Starter
 	{
 		public Menu SetMenu()
 		{
-			Menu menu = new Menu("DataEuler");
+			Menu menu = new Menu();
+			Web web;
 			Page page;
 
+			#region Leet
+			web = new Web { Title = "LeetCode" };
 			#region 01-10
-			page = new Page() { Title = "Euler Problems 01-10" };
+			page = new Page { Title = "LeetCode 01-10" };
+			page.Problems.Add(new Problem {
+				Type = typeof(TwoSum),
+				Method = "Start",
+				Description = "Indices of Two Numbers to Add Up to Target."
+			});
+			web.Pages.Add(page);
+			#endregion
+			menu.Webs.Add(web);
+			#endregion
+
+			#region Euler
+			web = new Web { Title = "Project Euler" };
+			#region 01-10
+			page = new Page { Title = "Euler Problems 01-10" };
 			page.Problems.Add(new Problem {
 				Type = typeof(MultiplesOf3And5),
 				Method = "Start",
@@ -76,7 +94,7 @@ namespace Starter
 				Description = "Summation Of Primes",
 				Comment = "Time-consuming"
 			}) ;
-			menu.Pages.Add(page);
+			web.Pages.Add(page);
 			#endregion
 
 			#region 11-20
@@ -141,7 +159,7 @@ namespace Starter
 				Method = "Start",
 				Description = "Factorial Sigit Sum"
 			});
-			menu.Pages.Add(page);
+			web.Pages.Add(page);
 			#endregion
 
 			#region 21-30
@@ -208,7 +226,7 @@ namespace Starter
 				Method = "Start",
 				Description = "Digit Fifth Powers"
 			});
-			menu.Pages.Add(page);
+			web.Pages.Add(page);
 			#endregion
 
 			#region 31-40
@@ -274,7 +292,7 @@ namespace Starter
 				Method = "Start",
 				Description = "Champernowne's Constant"
 			});
-			menu.Pages.Add(page);
+			web.Pages.Add(page);
 			#endregion
 
 			#region 41-50
@@ -341,7 +359,7 @@ namespace Starter
 				Description = "Consecutive Prime Sum",
 				Comment = "Time-consuming"
 			});
-			menu.Pages.Add(page);
+			web.Pages.Add(page);
 			#endregion
 
 			#region 51-60
@@ -407,7 +425,7 @@ namespace Starter
 				Description = "Prime Pair Sets",
 				Comment = "Time-consuming"
 			});
-			menu.Pages.Add(page);
+			web.Pages.Add(page);
 			#endregion
 
 			#region 61-70
@@ -418,9 +436,10 @@ namespace Starter
 				Method = "Start",
 				Description = "Maximum Path Sum II (Problem 67)"
 			});
-			menu.Pages.Add(page);
+			web.Pages.Add(page);
 			#endregion
-
+			menu.Webs.Add(web);
+			#endregion Euler
 			return menu;
 		}
 	}
