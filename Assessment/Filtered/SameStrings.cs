@@ -4,7 +4,7 @@ using System.Linq;
 namespace Assessment.Filtered {
 	public class SameStrings {
 		public void Start() {
-			Console.WriteLine("-- Two same strings");
+			Console.WriteLine("Compare two strings");
 			Action("helloWorld", "oworldHell");
 			Action("The same string", "stringemas  heT");
 			Action("abcd", "abcf");
