@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Numbers {
+namespace Utilities.Numbers {
 	public class IntArray {
 		public static string ToShow(int[] a) {
 			StringBuilder builder = new StringBuilder("[");
