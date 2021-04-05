@@ -17,6 +17,8 @@ namespace LeetCode.Leet01_10 {
 	public class AddNumbers {
 		public void Start() {
 			Add(new int[] { 2, 4, 3 }, new int[] { 5, 6, 4 });
+			Add(new int[] { 0 }, new int[] { 0});
+			Add(new int[] { 9,9,9,9,9,9,9}, new int[] { 9,9,9,9 });
 		}
 
 		private void Add(int[] a1, int[] a2) {
