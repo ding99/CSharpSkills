@@ -43,6 +43,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Assessment\Filtered\Filtered.csproj">
+      <Project>{efcbeea9-fff6-4eb7-91dd-1e1f2505af14}</Project>
+      <Name>Filtered</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LeetCode\Leet01_10\Leet01_10.csproj">
+      <Project>{9e0ac411-2daf-4376-a7e3-d4f613d7f5a2}</Project>
+      <Name>Leet01_10</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\ProjectEuler\Problems01_10\Problems01_10.csproj">
       <Project>{18211b6e-1cde-4f0e-b68d-b222a1d5aaa1}</Project>
       <Name>Problems01_10</Name>
