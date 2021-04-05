@@ -6,6 +6,7 @@ using ProjectEuler.Problems41_50;
 using ProjectEuler.Problems51_60;
 using ProjectEuler.Problems61_70;
 using LeetCode.Leet01_10;
+using Assessment.Filtered;
 
 namespace Starter
 {
@@ -17,7 +18,21 @@ namespace Starter
 			Web web;
 			Page page;
 
-			#region Leet
+			#region assessment
+			web = new Web { Title = "Assessment" };
+			#region filtered
+			page = new Page { Title = "Filtered" };
+			page.Problems.Add(new Problem {
+				Type = typeof(SameStrings),
+				Method = "Start",
+				Description = "Contain Same Characters"
+			});
+			web.Pages.Add(page);
+			#endregion
+			menu.Webs.Add(web);
+			#endregion
+
+			#region LeetCode
 			web = new Web { Title = "LeetCode" };
 			#region 01-10
 			page = new Page { Title = "LeetCode 01-10" };
@@ -29,7 +44,7 @@ namespace Starter
 			web.Pages.Add(page);
 			#endregion
 			menu.Webs.Add(web);
-			#endregion
+			#endregion LeetCode
 
 			#region Euler
 			web = new Web { Title = "Project Euler" };
