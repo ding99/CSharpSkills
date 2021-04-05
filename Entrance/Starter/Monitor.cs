@@ -11,7 +11,7 @@ namespace Starter
 
 			while (true)
 			{
-				Console.ForegroundColor = ConsoleColor.DarkYellow;
+				Console.ForegroundColor = ConsoleColor.DarkCyan;
 				Console.WriteLine("== Euler Problems Main Menu ==");
 
 				int number = 1;
