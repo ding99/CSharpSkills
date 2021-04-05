@@ -5,16 +5,18 @@ namespace Starter
 {
 	public class Menu
 	{
-		public IList<Page> Pages;
-		public string DataPath;
-
-		public Menu(string path)
-		{
-			Pages = new List<Page>();
-			DataPath = path;
-		}
+		public IList<Web> Webs;
 
 		public Menu() {
+			Webs = new List<Web>();
+		}
+	}
+
+	public class Web {
+		public string Title;
+		public IList<Page> Pages;
+
+		public Web() {
 			Pages = new List<Page>();
 		}
 	}
@@ -23,8 +25,7 @@ namespace Starter
 		public string Title;
 		public IList<Problem> Problems;
 
-		public Page()
-		{
+		public Page() {
 			Problems = new List<Problem>();
 		}
 	}

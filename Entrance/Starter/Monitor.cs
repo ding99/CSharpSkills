@@ -6,20 +6,17 @@ namespace Starter
 {
 	public class Monitor
 	{
-		private string dataPath;
-
 		public void Start(Menu menu) {
-			Console.Title = "Project Euler";
-			dataPath = menu.DataPath;
+			Console.Title = "Coding Skills Improvement";
 
 			while (true)
 			{
-				Console.ForegroundColor = ConsoleColor.Yellow;
+				Console.ForegroundColor = ConsoleColor.DarkCyan;
 				Console.WriteLine("== Euler Problems Main Menu ==");
 
 				int number = 1;
-				foreach (var page in menu.Pages)
-					Console.WriteLine(new StringBuilder((number++).ToString()).Append(". ").Append(page.Title).ToString());
+				foreach (var web in menu.Webs)
+					Console.WriteLine(new StringBuilder((number++).ToString()).Append(". ").Append(web.Title).ToString());
 
 				Console.WriteLine(new StringBuilder(number.ToString()).Append(". Exit").ToString());
 
@@ -29,15 +26,45 @@ namespace Starter
 
 					if (int.TryParse(read, out number) && number > 0)
 					{
-						if (number == menu.Pages.Count + 1)
+						if (number == menu.Webs.Count + 1)
 						{
 							Console.ResetColor();
 							return;
 						}
 
-						if (number <= menu.Pages.Count)
+						if (number <= menu.Webs.Count)
 						{
-							StartPage(menu.Pages[number - 1]);
+							StartWeb(menu.Webs[number - 1]);
+							break;
+						}
+					}
+				}
+			}
+		}
+
+		private void StartWeb(Web web) {
+
+			while (true) {
+				Console.ForegroundColor = ConsoleColor.Yellow;
+				Console.WriteLine($"== {web.Title} Problems Main Menu ==");
+
+				int number = 1;
+				foreach (var page in web.Pages)
+					Console.WriteLine(new StringBuilder((number++).ToString()).Append(". ").Append(page.Title).ToString());
+
+				Console.WriteLine(new StringBuilder(number.ToString()).Append(". Exit").ToString());
+
+				while (true) {
+					string read = Console.ReadLine();
+
+					if (int.TryParse(read, out number) && number > 0) {
+						if (number == web.Pages.Count + 1) {
+							Console.ResetColor();
+							return;
+						}
+
+						if (number <= web.Pages.Count) {
+							StartPage(web.Pages[number - 1]);
 							break;
 						}
 					}
