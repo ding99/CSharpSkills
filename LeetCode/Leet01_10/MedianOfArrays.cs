@@ -23,7 +23,5 @@ namespace LeetCode.Leet01_10 {
 			double median = size % 2 == 0 ? (sum[size / 2 - 1] + sum[size / 2]) / 2.0 : sum[size / 2];
 			Console.WriteLine("Output: {0:f}", median);
 		}
-
-
 	}
 }
