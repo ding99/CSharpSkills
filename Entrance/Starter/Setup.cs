@@ -47,6 +47,16 @@ namespace Starter
 				Method = "Start",
 				Description = "Longest Palindromic Substring"
 			});
+			page.Problems.Add(new Problem {
+				Type = typeof(ZigZag),
+				Method = "Start",
+				Description = "String Written in a ZigZag Pattern"
+			});
+			page.Problems.Add(new Problem {
+				Type = typeof(ReverseInt),
+				Method = "Start",
+				Description = "Integer with its Digits Reversed"
+			});
 			web.Pages.Add(page);
 			#endregion
 			menu.Webs.Add(web);
