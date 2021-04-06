@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace LeetCode.Leet01_10 {
 	public class ZigZag {
 		public void Start() {
 			Convert("PAYPALISHIRING", 3);
+			Convert("PAYPALISHIRING", 4);
 			Convert("A", 1);
 		}
 
