@@ -1,4 +1,7 @@
-﻿using System;
+﻿/* Given a string s, find the length of the longest substring without repeating characters. */
+
+
+using System;
 
 namespace LeetCode.Leet01_10 {
 	public class LongestSub {
