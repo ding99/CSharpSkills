@@ -21,10 +21,10 @@ namespace LeetCode.Leet01_10 {
 			char[] cx = Math.Abs(x).ToString().ToCharArray();
 			Array.Reverse(cx);
 			string nx = new string(cx);
+			if (minus) nx = "-" + nx;
 
-			int rev = 0;
-			if (Int32.TryParse(nx, out rev))
-				rev *= minus ? -1 : 1;
+			int rev;
+			Int32.TryParse(nx, out rev);
 
 			Console.WriteLine($"Ouput: {rev}");
 		}
