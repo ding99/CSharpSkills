@@ -13,7 +13,6 @@ namespace LeetCode.Leet01_10 {
 			Action(120);
 			Action(0);
 			Action(2147483647);
-			testc();
 		}
 
 		private void Action(int x) {
@@ -28,15 +27,6 @@ namespace LeetCode.Leet01_10 {
 				rev *= minus ? -1 : 1;
 
 			Console.WriteLine($"Ouput: {rev}");
-		}
-
-		private void testc() {
-			int n = Int32.MaxValue, mid;
-			string sn = n.ToString(), ln = "3" + sn.Substring(1);
-			Console.WriteLine($"max {n}, string {sn}, lstring {ln}");
-
-			if (Int32.TryParse(sn, out mid)) Console.WriteLine($"sn : {mid}");
-			Console.WriteLine($"ln parse : <{Int32.TryParse(ln, out mid)}>");
 		}
 	}
 }
