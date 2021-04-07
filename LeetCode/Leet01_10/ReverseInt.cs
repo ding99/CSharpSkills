@@ -12,6 +12,8 @@ namespace LeetCode.Leet01_10 {
 			Action(-123);
 			Action(120);
 			Action(0);
+			Action(2147483647);
+			testc();
 		}
 
 		private void Action(int x) {
@@ -21,12 +23,20 @@ namespace LeetCode.Leet01_10 {
 			Array.Reverse(cx);
 			string nx = new string(cx);
 
-			long rev;
-			if (long.TryParse(nx, out rev))
+			int rev = 0;
+			if (Int32.TryParse(nx, out rev))
 				rev *= minus ? -1 : 1;
-			int last = rev > Int32.MaxValue || rev < Int32.MinValue ? 0 : (int)rev;
 
-			Console.WriteLine($"Ouput: {last}");
+			Console.WriteLine($"Ouput: {rev}");
+		}
+
+		private void testc() {
+			int n = Int32.MaxValue, mid;
+			string sn = n.ToString(), ln = "3" + sn.Substring(1);
+			Console.WriteLine($"max {n}, string {sn}, lstring {ln}");
+
+			if (Int32.TryParse(sn, out mid)) Console.WriteLine($"sn : {mid}");
+			Console.WriteLine($"ln parse : <{Int32.TryParse(ln, out mid)}>");
 		}
 	}
 }
