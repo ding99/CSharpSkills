@@ -23,16 +23,39 @@ using System.Text;
 namespace LeetCode.Leet01_10 {
 	public class StringToInt {
 		public void Start() {
-			Action("42");
-			Action(" 42 ");
-			Action("	4 2");
+			Convert("42");
+			Convert("  -42");
+			Convert("4193 with words");
+			Convert("words and 987");
+			Convert("- 91283472332");
 		}
 
-		private void Action(string s) {
-			Console.WriteLine($"Input: \"{s}\"");
+		private void Convert(string s) {
+			Console.WriteLine($"--- Input: \"{s}\"");
 
-			s = s.TrimStart();
-			Console.WriteLine($"(m) Input: \"{s}\"");
+			while (s.StartsWith(" "))
+				s = s.Substring(1);
+
+			bool nega = false;
+			if (s.StartsWith("-")) { s = s.Substring(1); nega = true; }
+			else if (s.StartsWith("+")) s.Substring(1);
+
+			Console.WriteLine($"(1) Input: \"{s}\"");
+
+			int result = 0, size = s.Length, valid = 0;
+			if(size > 0) {
+				for (int i = 0; i < size; i++)
+					if (s[i] >= 0x30 && s[i] <= 0x39)
+						valid++;
+					else break;
+				s = s.Substring(0, valid);
+				if (nega) s = "-" + s;
+
+				if(!Int32.TryParse(s, out result))
+					result = nega ? Int32.MinValue : Int32.MaxValue;
+			}
+
+			Console.WriteLine($"(2) Input: \"{s}\", result ({result})");
 		}
 	}
 }
