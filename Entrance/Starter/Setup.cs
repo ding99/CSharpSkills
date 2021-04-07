@@ -62,6 +62,11 @@ namespace Starter
 				Method = "Start",
 				Description = "Converts a String to a 32-Bit Signed Integer"
 			});
+			page.Problems.Add(new Problem {
+				Type = typeof(Palindrome),
+				Method = "Start",
+				Description = "Palindrome Integer"
+			});
 			web.Pages.Add(page);
 			#endregion
 			menu.Webs.Add(web);
