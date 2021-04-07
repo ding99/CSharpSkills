@@ -1,4 +1,6 @@
-﻿using System;
+﻿/* Given a string s, return the longest palindromic substring in s. */
+
+using System;
 using Utilities.Characters;
 
 namespace LeetCode.Leet01_10 {
