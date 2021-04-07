@@ -47,9 +47,12 @@ namespace LeetCode.Leet01_10 {
 						valid++;
 					else break;
 				s = s.Substring(0, valid);
+				if (nega) s = "-" + s;
+
+				Int32.TryParse(s, out result);
 			}
 
-			Console.WriteLine($"(2) Input: \"{s}\", result ({result * (nega ? -1 : 1)})");
+			Console.WriteLine($"(2) Input: \"{s}\", result ({result})");
 		}
 	}
 }
