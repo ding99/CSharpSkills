@@ -17,8 +17,6 @@ Read in next the characters until the next non-digit charcter or the end of the 
 */
 
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace LeetCode.Leet01_10 {
 	public class StringToInt {
@@ -27,11 +25,11 @@ namespace LeetCode.Leet01_10 {
 			Convert("  -42");
 			Convert("4193 with words");
 			Convert("words and 987");
-			Convert("- 91283472332");
+			Convert("-91283472332");
 		}
 
 		private void Convert(string s) {
-			Console.WriteLine($"--- Input: \"{s}\"");
+			Console.WriteLine($"Input: s = \"{s}\"");
 
 			while (s.StartsWith(" "))
 				s = s.Substring(1);
@@ -40,7 +38,6 @@ namespace LeetCode.Leet01_10 {
 			if (s.StartsWith("-")) { s = s.Substring(1); nega = true; }
 			else if (s.StartsWith("+")) s.Substring(1);
 
-			Console.WriteLine($"(1) Input: \"{s}\"");
 
 			int result = 0, size = s.Length, valid = 0;
 			if(size > 0) {
@@ -49,13 +46,16 @@ namespace LeetCode.Leet01_10 {
 						valid++;
 					else break;
 				s = s.Substring(0, valid);
-				if (nega) s = "-" + s;
 
-				if(!Int32.TryParse(s, out result))
-					result = nega ? Int32.MinValue : Int32.MaxValue;
+				if (s.Length > 0) {
+					if (nega) s = "-" + s;
+
+					if (!Int32.TryParse(s, out result))
+						result = nega ? Int32.MinValue : Int32.MaxValue;
+				}
 			}
 
-			Console.WriteLine($"(2) Input: \"{s}\", result ({result})");
+			Console.WriteLine($"Output: {result}");
 		}
 	}
 }
