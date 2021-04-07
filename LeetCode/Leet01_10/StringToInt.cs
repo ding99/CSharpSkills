@@ -24,15 +24,32 @@ namespace LeetCode.Leet01_10 {
 	public class StringToInt {
 		public void Start() {
 			Action("42");
-			Action(" 42 ");
-			Action("	4 2");
+			Action(" 4 2I34 ");
+			Action("   42I2332ee ");
 		}
 
 		private void Action(string s) {
-			Console.WriteLine($"Input: \"{s}\"");
+			Console.WriteLine($"--- Input: \"{s}\"");
 
-			s = s.TrimStart();
-			Console.WriteLine($"(m) Input: \"{s}\"");
+			while (s.StartsWith(" "))
+				s = s.Substring(1);
+
+			bool nega = false;
+			if (s.StartsWith("-")) { s = s.Substring(1); nega = true; }
+			else if (s.StartsWith("+")) s.Substring(1);
+
+			Console.WriteLine($"(1) Input: \"{s}\"");
+
+			int result = 0, size = s.Length, valid = 0;
+			if(size > 0) {
+				for (int i = 0; i < size; i++)
+					if (s[i] >= 0x30 && s[i] <= 0x39)
+						valid++;
+					else break;
+				s = s.Substring(0, valid);
+			}
+
+			Console.WriteLine($"(2) Input: \"{s}\", result ({result * (nega ? -1 : 1)})");
 		}
 	}
 }
