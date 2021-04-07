@@ -57,6 +57,11 @@ namespace Starter
 				Method = "Start",
 				Description = "Integer with its Digits Reversed"
 			});
+			page.Problems.Add(new Problem {
+				Type = typeof(StringToInt),
+				Method = "Start",
+				Description = "Converts a String to a 32-Bit Signed Integer"
+			});
 			web.Pages.Add(page);
 			#endregion
 			menu.Webs.Add(web);
