@@ -72,11 +72,6 @@ namespace Starter
 				Method = "Start",
 				Description = "Regular Expression Matching"
 			});
-			page.Problems.Add(new Problem {
-				Type = typeof(RegularExpression),
-				Method = "Start",
-				Description = "Regular Expression"
-			});
 			web.Pages.Add(page);
 			#endregion
 			menu.Webs.Add(web);
