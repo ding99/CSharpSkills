@@ -75,7 +75,7 @@ namespace Starter
 			page.Problems.Add(new Problem {
 				Type = typeof(RegularExpression),
 				Method = "Start",
-				Description = "Regular Expression Matching"
+				Description = "Regular Expression"
 			});
 			web.Pages.Add(page);
 			#endregion
