@@ -6,6 +6,7 @@ using ProjectEuler.Euler41_50;
 using ProjectEuler.Euler51_60;
 using ProjectEuler.Euler61_70;
 using LeetCode.Leet01_10;
+using LeetCode.Leet11_20;
 using Assessment.Filtered;
 
 namespace Starter
@@ -61,6 +62,25 @@ namespace Starter
 				Type = typeof(StringToInt),
 				Method = "Start",
 				Description = "Converts a String to a 32-Bit Signed Integer"
+			});
+			page.Problems.Add(new Problem {
+				Type = typeof(Palindrome),
+				Method = "Start",
+				Description = "Palindrome Integer"
+			});
+			page.Problems.Add(new Problem {
+				Type = typeof(RegularExpression),
+				Method = "Start",
+				Description = "Regular Expression Matching"
+			});
+			web.Pages.Add(page);
+			#endregion
+			#region 11-20
+			page = new Page { Title = "LeetCode 11-20" };
+			page.Problems.Add(new Problem {
+				Type = typeof(WaterContainer),
+				Method = "Start",
+				Description = "Container with Most Water"
 			});
 			web.Pages.Add(page);
 			#endregion
