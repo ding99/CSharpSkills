@@ -51,6 +51,10 @@
       <Project>{9e0ac411-2daf-4376-a7e3-d4f613d7f5a2}</Project>
       <Name>Leet01_10</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\LeetCode\Leet11_20\Leet11_20.csproj">
+      <Project>{0ae05fb6-222c-4e44-8794-bfbf46fbb627}</Project>
+      <Name>Leet11_20</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\ProjectEuler\Euler01_10\Euler01_10.csproj">
       <Project>{18211b6e-1cde-4f0e-b68d-b222a1d5aaa1}</Project>
       <Name>Euler01_10</Name>
