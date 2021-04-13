@@ -92,6 +92,11 @@ namespace Starter
 				Method = "Roman2Int",
 				Description = "Roman to Integer"
 			});
+			page.Problems.Add(new Problem {
+				Type = typeof(CommonPrefix),
+				Method = "Start",
+				Description = "Longest Common Prefix"
+			});
 			web.Pages.Add(page);
 			#endregion
 			menu.Webs.Add(web);
