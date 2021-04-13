@@ -23,16 +23,16 @@ using System;
 using System.Collections.Generic;
 
 namespace LeetCode.Leet11_20 {
-	public class Int2Roman {
-		public void Start() {
-			Action(3);
-			Action(4);
-			Action(9);
-			Action(58);
-			Action(1994);
+	public class RomanNumbers {
+		public void Int2Roman() {
+			Int2RomanOne(3);
+			Int2RomanOne(4);
+			Int2RomanOne(9);
+			Int2RomanOne(58);
+			Int2RomanOne(1994);
 		}
 
-		private void Action(int num) {
+		private void Int2RomanOne(int num) {
 			Console.WriteLine($"Input: num = {num}");
 			string roman = string.Empty;
 
@@ -50,6 +50,38 @@ namespace LeetCode.Leet11_20 {
 				while (num >= k) { roman += table[k]; num -= k; }
 
 			Console.WriteLine($"Output: \"{roman}\"");
+		}
+
+		public void Roman2Int() {
+			Roman2IntOne("III");
+			Roman2IntOne("IV");
+			Roman2IntOne("IX");
+			Roman2IntOne("LVIII");
+			Roman2IntOne("MCMXCIV");
+		}
+
+		private void Roman2IntOne(string r) {
+			Console.WriteLine($"Input: \"{r}\"");
+			int num = 0, size = r.Length, step = 2;
+
+			Dictionary<string, int> table = new Dictionary<string, int>{
+				{ "M", 1000 }, {"CM",900},
+				{ "D", 500}, {"CD", 400},
+				{ "C",100 }, { "XC",90},
+				{ "L",50 }, { "XL", 40},
+				{ "X",10 }, {"IX",9},
+				{ "V",5 }, { "IV",4},
+				{ "I", 1 }
+			};
+
+			string key = string.Empty;
+			for(int i = 0; i < size; i += step)
+				if(i + 3 < size && table.ContainsKey(key = r.Substring(i, step = 2)))
+					num += table[key];
+				else if (table.ContainsKey(key = r.Substring(i, step = 1)))
+					num += table[key];
+
+			Console.WriteLine($"Output: {num}");
 		}
 	}
 }
