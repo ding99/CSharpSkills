@@ -23,16 +23,16 @@ using System;
 using System.Collections.Generic;
 
 namespace LeetCode.Leet11_20 {
-	public class Int2Roman {
-		public void Start() {
-			Action(3);
-			Action(4);
-			Action(9);
-			Action(58);
-			Action(1994);
+	public class RomanNumbers {
+		public void Int2Roman() {
+			Int2RomanOne(3);
+			Int2RomanOne(4);
+			Int2RomanOne(9);
+			Int2RomanOne(58);
+			Int2RomanOne(1994);
 		}
 
-		private void Action(int num) {
+		private void Int2RomanOne(int num) {
 			Console.WriteLine($"Input: num = {num}");
 			string roman = string.Empty;
 
@@ -50,6 +50,16 @@ namespace LeetCode.Leet11_20 {
 				while (num >= k) { roman += table[k]; num -= k; }
 
 			Console.WriteLine($"Output: \"{roman}\"");
+		}
+
+		public void Roman2Int() {
+			Roman2IntOne("X");
+		}
+
+		private void Roman2IntOne(string r) {
+			Console.WriteLine($"Input: \"{r}\"");
+			int num = 0;
+			Console.WriteLine($"Output: {num}");
 		}
 	}
 }
