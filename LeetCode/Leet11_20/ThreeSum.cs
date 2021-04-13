@@ -5,7 +5,8 @@ Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]]
 
 Notice that the solution set must not contain duplicate triplets. 
 
--- 3Sum Closer
+-- 3Sum Closest
+Given an array nums of n integers and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assume that each input would have exactly one solution.
 */
 
 using System;
@@ -21,10 +22,7 @@ namespace LeetCode.Leet11_20 {
 		}
 
 		private void ActionZero(int[] nums){
-			int n = nums.Length;
-			Console.Write("Input: nums = [");
-			for (int i = 0; i < n; i++) Console.Write($"{nums[i]}{(i + 1 == n ? "":",")}");
-			Console.WriteLine("]");
+			int n = display(nums);
 
 			List<int[]> sums = new List<int[]>();
 
@@ -52,6 +50,23 @@ namespace LeetCode.Leet11_20 {
 			foreach(int[] a in list)
 				if(a.SequenceEqual(element)) return;
 			list.Add(element);
+		}
+
+		public void SumClosest() {
+			ActionClose(new int[] {-1,2,1,-4 });
+		}
+
+		private void ActionClose(int [] nums) {
+			int n = display(nums), result = 0;
+			Console.WriteLine($"Output: {result}");
+		}
+
+		private int display(int[] nums) {
+			int n = nums.Length;
+			Console.Write("Input: nums = [");
+			for (int i = 0; i < n; i++) Console.Write($"{nums[i]}{(i + 1 == n ? "" : ",")}");
+			Console.WriteLine("]");
+			return n;
 		}
 	}
 }
