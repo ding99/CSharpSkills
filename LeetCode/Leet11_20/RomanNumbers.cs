@@ -62,7 +62,6 @@ namespace LeetCode.Leet11_20 {
 
 		private void Roman2IntOne(string r) {
 			Console.WriteLine($"Input: \"{r}\"");
-			int num = 0, size = r.Length, step = 2;
 
 			Dictionary<string, int> table = new Dictionary<string, int>{
 				{ "M", 1000 }, {"CM",900},
@@ -74,9 +73,10 @@ namespace LeetCode.Leet11_20 {
 				{ "I", 1 }
 			};
 
-			string key = string.Empty;
+			int num = 0, size = r.Length, step;
+			string key;
 			for(int i = 0; i < size; i += step)
-				if(i + 3 < size && table.ContainsKey(key = r.Substring(i, step = 2)))
+				if(i + 1 < size && table.ContainsKey(key = r.Substring(i, step = 2)))
 					num += table[key];
 				else if (table.ContainsKey(key = r.Substring(i, step = 1)))
 					num += table[key];
