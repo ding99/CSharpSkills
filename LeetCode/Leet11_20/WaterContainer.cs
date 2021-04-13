@@ -9,7 +9,10 @@ using System;
 namespace LeetCode.Leet11_20 {
 	public class WaterContainer {
 		public void Start() {
-			Action(new int[] {1, 8, 6,2,5,4,8,3,7 });
+			Action(new int[] {1, 8, 6,2,5,4,8,3,7});
+			Action(new int[] {1, 1});
+			Action(new int[] {4,3,2,1,4});
+			Action(new int[] { 1, 2,1 });
 		}
 
 		private void Action(int[] heights) {
