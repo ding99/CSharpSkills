@@ -53,7 +53,11 @@ namespace LeetCode.Leet11_20 {
 		}
 
 		public void Roman2Int() {
-			Roman2IntOne("X");
+			Roman2IntOne("III");
+			Roman2IntOne("IV");
+			Roman2IntOne("IX");
+			Roman2IntOne("LVIII");
+			Roman2IntOne("MCMXCIV");
 		}
 
 		private void Roman2IntOne(string r) {
