@@ -11,6 +11,7 @@ Notice that the solution set must not contain duplicate triplets.
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace LeetCode.Leet11_20 {
 	public class ThreeSum {
@@ -25,8 +26,17 @@ namespace LeetCode.Leet11_20 {
 			Console.WriteLine();
 
 			List<int[]> sums = new List<int[]>();
-			sums.Add(new int[] { 1,2,3});
-			sums.Add(new int[] { 4,5,6});
+			int[] tri;
+
+			if (n > 2)
+				for (int i = 0; i + 2 < n; i++)
+					for (int j = i + 1; j + 1 < n; j++)
+						for (int k = j + 1; k < n; k++)
+							if (nums[i] + nums[j] + nums[k] == 0 && !Contained(sums, tri = new int[] { nums[i], nums[j], nums[k] })) {
+								Array.Sort(tri);
+								sums.Add(tri);
+							}
+
 			int[][] arraySum = sums.ToArray();
 			Console.Write("Output: [");
 			for(int i = 0; i < arraySum.Length; i++) {
@@ -36,7 +46,17 @@ namespace LeetCode.Leet11_20 {
 				Console.Write(i + 1 == arraySum.Length ? "]" : ",");
 			}
 			Console.WriteLine();
+		}
 
+		private bool Contained(List<int[]> list, int[] element) {
+			Array.Sort(element);
+			Console.Write($"list size({list.Count}) <");
+			foreach (var a in element) Console.Write($" {a}");
+			Console.WriteLine(" >");
+			foreach(int[] a in list)
+				if(a.SequenceEqual(element)) return true;
+			Console.WriteLine("-- false");
+			return false;
 		}
 	}
 }
