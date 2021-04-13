@@ -58,7 +58,25 @@ namespace LeetCode.Leet11_20 {
 
 		private void Roman2IntOne(string r) {
 			Console.WriteLine($"Input: \"{r}\"");
-			int num = 0;
+			int num = 0, size = r.Length, step = 2;
+
+			Dictionary<string, int> table = new Dictionary<string, int>{
+				{ "M", 1000 }, {"CM",900},
+				{ "D", 500}, {"CD", 400},
+				{ "C",100 }, { "XC",90},
+				{ "L",50 }, { "XL", 40},
+				{ "X",10 }, {"IX",9},
+				{ "V",5 }, { "IV",4},
+				{ "I", 1 }
+			};
+
+			string key = string.Empty;
+			for(int i = 0; i < size; i += step)
+				if(i + 3 < size && table.ContainsKey(key = r.Substring(i, step = 2)))
+					num += table[key];
+				else if (table.ContainsKey(key = r.Substring(i, step = 1)))
+					num += table[key];
+
 			Console.WriteLine($"Output: {num}");
 		}
 	}
