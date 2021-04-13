@@ -507,6 +507,11 @@ namespace Starter
 				Method = "Start",
 				Description = "Longest Common Prefix"
 			});
+			page.Problems.Add(new Problem {
+				Type = typeof(ThreeSum),
+				Method = "SumZero",
+				Description = "Triplets with Zero Sum"
+			});
 			web.Pages.Add(page);
 			#endregion
 			menu.Webs.Add(web);
