@@ -19,89 +19,6 @@ namespace Starter
 			Web web;
 			Page page;
 
-			#region LeetCode
-			web = new Web { Title = "LeetCode" };
-			#region 01-10
-			page = new Page { Title = "LeetCode 01-10" };
-			page.Problems.Add(new Problem {
-				Type = typeof(TwoSum),
-				Method = "Start",
-				Description = "Indices of Two Numbers to Add Up to Target"
-			});
-			page.Problems.Add(new Problem {
-				Type = typeof(AddNumbers),
-				Method = "Start",
-				Description = "Add LinkedLists"
-			});
-			page.Problems.Add(new Problem {
-				Type = typeof(LongestSub),
-				Method = "Start",
-				Description = "Longest Substring without Repeating Characters"
-			});
-			page.Problems.Add(new Problem {
-				Type = typeof(MedianOfArrays),
-				Method = "Start",
-				Description = "Median of Sorted Arrays"
-			});
-			page.Problems.Add(new Problem {
-				Type = typeof(LongestPalindromicSub),
-				Method = "Start",
-				Description = "Longest Palindromic Substring"
-			});
-			page.Problems.Add(new Problem {
-				Type = typeof(ZigZag),
-				Method = "Start",
-				Description = "String Written in a ZigZag Pattern"
-			});
-			page.Problems.Add(new Problem {
-				Type = typeof(ReverseInt),
-				Method = "Start",
-				Description = "Integer with its Digits Reversed"
-			});
-			page.Problems.Add(new Problem {
-				Type = typeof(StringToInt),
-				Method = "Start",
-				Description = "Converts a String to a 32-Bit Signed Integer"
-			});
-			page.Problems.Add(new Problem {
-				Type = typeof(Palindrome),
-				Method = "Start",
-				Description = "Palindrome Integer"
-			});
-			page.Problems.Add(new Problem {
-				Type = typeof(RegularExpression),
-				Method = "Start",
-				Description = "Regular Expression Matching"
-			});
-			web.Pages.Add(page);
-			#endregion
-			#region 11-20
-			page = new Page { Title = "LeetCode 11-20" };
-			page.Problems.Add(new Problem {
-				Type = typeof(WaterContainer),
-				Method = "Start",
-				Description = "Container with Most Water"
-			});
-			page.Problems.Add(new Problem {
-				Type = typeof(RomanNumbers),
-				Method = "Int2Roman",
-				Description = "Integer to Roman"
-			});
-			page.Problems.Add(new Problem {
-				Type = typeof(RomanNumbers),
-				Method = "Roman2Int",
-				Description = "Roman to Integer"
-			});
-			page.Problems.Add(new Problem {
-				Type = typeof(CommonPrefix),
-				Method = "Start",
-				Description = "Longest Common Prefix"
-			});
-			web.Pages.Add(page);
-			#endregion
-			menu.Webs.Add(web);
-			#endregion LeetCode
-
 			#region Euler
 			web = new Web { Title = "Project Euler" };
 			#region 01-10
@@ -511,6 +428,89 @@ namespace Starter
 			#endregion
 			menu.Webs.Add(web);
 			#endregion Euler
+
+			#region LeetCode
+			web = new Web { Title = "LeetCode" };
+			#region 01-10
+			page = new Page { Title = "LeetCode 01-10" };
+			page.Problems.Add(new Problem {
+				Type = typeof(TwoSum),
+				Method = "Start",
+				Description = "Indices of Two Numbers to Add Up to Target"
+			});
+			page.Problems.Add(new Problem {
+				Type = typeof(AddNumbers),
+				Method = "Start",
+				Description = "Add LinkedLists"
+			});
+			page.Problems.Add(new Problem {
+				Type = typeof(LongestSub),
+				Method = "Start",
+				Description = "Longest Substring without Repeating Characters"
+			});
+			page.Problems.Add(new Problem {
+				Type = typeof(MedianOfArrays),
+				Method = "Start",
+				Description = "Median of Sorted Arrays"
+			});
+			page.Problems.Add(new Problem {
+				Type = typeof(LongestPalindromicSub),
+				Method = "Start",
+				Description = "Longest Palindromic Substring"
+			});
+			page.Problems.Add(new Problem {
+				Type = typeof(ZigZag),
+				Method = "Start",
+				Description = "String Written in a ZigZag Pattern"
+			});
+			page.Problems.Add(new Problem {
+				Type = typeof(ReverseInt),
+				Method = "Start",
+				Description = "Integer with its Digits Reversed"
+			});
+			page.Problems.Add(new Problem {
+				Type = typeof(StringToInt),
+				Method = "Start",
+				Description = "Converts a String to a 32-Bit Signed Integer"
+			});
+			page.Problems.Add(new Problem {
+				Type = typeof(Palindrome),
+				Method = "Start",
+				Description = "Palindrome Integer"
+			});
+			page.Problems.Add(new Problem {
+				Type = typeof(RegularExpression),
+				Method = "Start",
+				Description = "Regular Expression Matching"
+			});
+			web.Pages.Add(page);
+			#endregion
+			#region 11-20
+			page = new Page { Title = "LeetCode 11-20" };
+			page.Problems.Add(new Problem {
+				Type = typeof(WaterContainer),
+				Method = "Start",
+				Description = "Container with Most Water"
+			});
+			page.Problems.Add(new Problem {
+				Type = typeof(RomanNumbers),
+				Method = "Int2Roman",
+				Description = "Integer to Roman"
+			});
+			page.Problems.Add(new Problem {
+				Type = typeof(RomanNumbers),
+				Method = "Roman2Int",
+				Description = "Roman to Integer"
+			});
+			page.Problems.Add(new Problem {
+				Type = typeof(CommonPrefix),
+				Method = "Start",
+				Description = "Longest Common Prefix"
+			});
+			web.Pages.Add(page);
+			#endregion
+			menu.Webs.Add(web);
+			#endregion LeetCode
 
 			#region assessment
 			web = new Web { Title = "Assessment" };
