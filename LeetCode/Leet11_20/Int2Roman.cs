@@ -27,6 +27,10 @@ namespace LeetCode.Leet11_20 {
 	public class Int2Roman {
 		public void Start() {
 			Action(3);
+			Action(4);
+			Action(9);
+			Action(58);
+			Action(1994);
 		}
 
 		private void Action(int num) {
@@ -34,51 +38,17 @@ namespace LeetCode.Leet11_20 {
 			string roman = string.Empty;
 
 			Dictionary<int, string> table = new Dictionary<int, string>{
-				{ 1000, "M" },
-				{ 500, "D" },
-				{ 100, "C" },
-				{ 50, "L" },
-				{ 10, "X" },
-				{ 5, "V" },
+				{ 1000, "M" }, {900, "CM"},
+				{ 500, "D" }, {400, "CD"},
+				{ 100, "C" }, {90, "XC"},
+				{ 50, "L" }, {40, "XL"},
+				{ 10, "X" }, {9, "IX"},
+				{ 5, "V" }, {4, "IV"},
 				{ 1, "I" }
 			};
 
-			var keys = table.Keys;
-			Console.Write($"keys ({keys.Count})");
-			foreach (var k in keys) Console.Write($" <{k}>[{table[k]}]");
-			Console.WriteLine();
-
-			foreach (int k in table.Keys) {
-				switch (k) {
-					case 4:
-						roman += "IV";
-						num -= 4;
-						break;
-					case 9:
-						roman += "IX";
-						num -= 9;
-						break;
-					case 40:
-						roman += "XL";
-						num -= 40;
-						break;
-					case 90:
-						roman += "XC";
-						num -= 90;
-						break;
-					case 400:
-						roman += "CD";
-						num -= 400;
-						break;
-					case 900:
-						roman += "CM";
-						num -= 900;
-						break;
-					default:
-						while (num >= k) { roman += table[k]; num -= k; }
-						break;
-				}
-			}
+			foreach (int k in table.Keys)
+				while (num >= k) { roman += table[k]; num -= k; }
 
 			Console.WriteLine($"Output: \"{roman}\"");
 		}
