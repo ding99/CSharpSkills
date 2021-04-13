@@ -23,7 +23,6 @@ namespace LeetCode.Leet01_10 {
 			Console.WriteLine($"Input: s = \"{s}\", p = \"{p}\"");
 
 			Match m = Regex.Match(s, p.Replace(".", "\\w"));
-			Console.WriteLine($"matched value [{m.Value}]");
 			Console.WriteLine($"Output: {m.Value == s}");
 		}
 	}
