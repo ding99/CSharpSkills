@@ -82,6 +82,16 @@ namespace Starter
 				Method = "Start",
 				Description = "Container with Most Water"
 			});
+			page.Problems.Add(new Problem {
+				Type = typeof(RomanNumbers),
+				Method = "Int2Roman",
+				Description = "Integer to Roman"
+			});
+			page.Problems.Add(new Problem {
+				Type = typeof(RomanNumbers),
+				Method = "Roman2Int",
+				Description = "Roman to Integer"
+			});
 			web.Pages.Add(page);
 			#endregion
 			menu.Webs.Add(web);
