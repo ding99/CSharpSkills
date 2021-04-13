@@ -17,14 +17,19 @@ namespace LeetCode.Leet11_20 {
 
 		private void Action(int[] heights) {
 			int n = heights.Length, max = 0, mid;
-			
-			if(n > 1)
+
+			Console.Write($"Input: height = [");
+			for (int i = 0; i < n; i++)
+				Console.Write($"{heights[i]}{(i + 1 == n ? "]" : ",")}");
+			Console.WriteLine();
+
+			if (n > 1)
 				for(int i = 0; i + 1 < n; i++)
 					for (int j = i + 1; j < n; j++)
 						if((mid = (j - i) * (heights[i] > heights[j] ? heights[j] : heights[i])) > max)
 								max = mid;
 
-			Console.WriteLine($"size [{n}], max-volume [{max}]");
+			Console.WriteLine($"Output: {max}");
 		}
 	}
 }
