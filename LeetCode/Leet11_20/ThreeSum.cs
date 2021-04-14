@@ -22,7 +22,8 @@ namespace LeetCode.Leet11_20 {
 		}
 
 		private void ActionZero(int[] nums){
-			int n = display(nums);
+			int n = Display(nums);
+			Console.WriteLine();
 
 			List<int[]> sums = new List<int[]>();
 
@@ -53,19 +54,27 @@ namespace LeetCode.Leet11_20 {
 		}
 
 		public void SumClosest() {
-			ActionClose(new int[] {-1,2,1,-4 });
+			ActionClose(new int[] {-1,2,1,-4 }, 1);
 		}
 
-		private void ActionClose(int [] nums) {
-			int n = display(nums), result = 0;
+		private void ActionClose(int [] nums, int target) {
+			int n = Display(nums), result = Int32.MaxValue;
+			Console.WriteLine($", target = {target}");
+			if (n > 2)
+				for (int i = 0; i + 2 < n; i++)
+					for (int j = i + 1; j + 1 < n; j++)
+						for (int k = j + 1; k < n; k++)
+							if (Math.Abs(nums[i] + nums[j] + nums[k] - target) < result)
+								result = nums[i] + nums[j] + nums[k];
+
 			Console.WriteLine($"Output: {result}");
 		}
 
-		private int display(int[] nums) {
+		private int Display(int[] nums) {
 			int n = nums.Length;
 			Console.Write("Input: nums = [");
 			for (int i = 0; i < n; i++) Console.Write($"{nums[i]}{(i + 1 == n ? "" : ",")}");
-			Console.WriteLine("]");
+			Console.Write("]");
 			return n;
 		}
 	}
