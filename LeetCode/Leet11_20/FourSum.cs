@@ -7,6 +7,7 @@ namespace LeetCode.Leet11_20 {
 	public class FourSum {
 		public void Start() {
 			Action(new int[] { 1,0,-1,0,-2,2}, 0);
+			Action(new int[] { 2,2,2, 2, 2 }, 8);
 		}
 
 		private void Action(int[] nums, int target) {
