@@ -522,6 +522,11 @@ namespace Starter
 				Method = "Start",
 				Description = "Letter Combinations of a Phone Number"
 			});
+			page.Problems.Add(new Problem {
+				Type = typeof(FourSum),
+				Method = "Start",
+				Description = "Quadruplets with a Sum of the Specified Value "
+			});
 			web.Pages.Add(page);
 			#endregion
 			menu.Webs.Add(web);
