@@ -18,15 +18,40 @@ namespace LeetCode.Leet11_20 {
 		private void OneNumber(string digits) {
 			Console.WriteLine($"Input: digits = \"{digits}\"");
 
-			List<string> letters = new List<string>();
+			Dictionary<char, char[]> letters = new Dictionary<char, char[]> {
+				{'2', new char[]{ 'a','b','c'} },
+				{'3', new char[]{ 'd','e','f'} },
+				{'4', new char[]{ 'g','h','i'} },
+				{'5', new char[]{ 'j','k','l'} },
+				{'6', new char[]{ 'm','n','o'} },
+				{'7', new char[]{ 'p','q','r','s'} },
+				{'8', new char[]{ 't','u','v'} },
+				{'9', new char[]{ 'w','x','y','z'} }
+			};
 
-			letters.Add("ac");
+			List<string> combination = new List<string>();
+
+			int size = digits.Length;
+			if (size > 0)
+				for (int i = 0; i < size; i++)
+					combination = OneLetter(combination, letters[digits[i]]);
 
 			Console.Write("Output: [");
-			int n = letters.Count;
+			int n = combination.Count;
 			for (int i = 0; i < n; i++)
-				Console.Write($"\"{letters[i]}\"{(i + 1 == n ? "]" : ",")}");
-			Console.WriteLine();
+				Console.Write($"\"{combination[i]}\"{(i + 1 == n ? "" : ",")}");
+			Console.WriteLine("]");
+		}
+
+		private List<string> OneLetter(List<string> prev, char[] chars) {
+			List<string> next = new List<string>();
+			if (prev.Count < 1)
+				foreach (char c in chars)
+					next.Add(string.Empty + c);
+			else foreach(string s in prev)
+				foreach(char c in chars)
+					next.Add(s + c);
+			return next;
 		}
 	}
 }
