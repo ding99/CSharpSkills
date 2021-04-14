@@ -15,21 +15,21 @@ namespace LeetCode.Leet11_20 {
 
 			List<int[]> sums = new List<int[]>();
 
-			if (n > 2)
-				for (int i = 0; i + 2 < n; i++)
-					for (int j = i + 1; j + 1 < n; j++)
-						for (int k = j + 1; k < n; k++)
-							if (nums[i] + nums[j] + nums[k] == 0)
-								UpdateList(sums, new int[] { nums[i], nums[j], nums[k] });
+			if (n > 3)
+				for (int i = 0; i + 3 < n; i++)
+					for (int j = i + 1; j + 2 < n; j++)
+						for (int k = j + 1; k + 1< n; k++)
+							for(int l = k + 1; l < n; l++)
+							if (nums[i] + nums[j] + nums[k] + nums[l] == target)
+								UpdateList(sums, new int[] { nums[i], nums[j], nums[k], nums[l] });
 
-			int[][] arraySum = sums.ToArray();
 			Console.Write("Output: [");
-			for (int i = 0; i < arraySum.Length; i++) {
+			for (int i = 0; i < sums.Count; i++) {
 				Console.Write("[");
-				for (int j = 0; j < arraySum[i].Length; j++)
-					Console.Write($"{arraySum[i][j]}{(j + 1 == arraySum[i].Length ? "" : ",")}");
+				for (int j = 0; j < sums[i].Length; j++)
+					Console.Write($"{sums[i][j]}{(j + 1 == sums[i].Length ? "" : ",")}");
 				Console.Write("]");
-				Console.Write(i + 1 == arraySum.Length ? "" : ",");
+				Console.Write(i + 1 == sums.Count ? "" : ",");
 			}
 			Console.WriteLine("]");
 		}
