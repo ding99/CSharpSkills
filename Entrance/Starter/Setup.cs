@@ -512,6 +512,11 @@ namespace Starter
 				Method = "SumZero",
 				Description = "Triplets with Zero Sum"
 			});
+			page.Problems.Add(new Problem {
+				Type = typeof(ThreeSum),
+				Method = "SumClosest",
+				Description = "Triplets with a Sum Closest to a Value"
+			});
 			web.Pages.Add(page);
 			#endregion
 			menu.Webs.Add(web);
