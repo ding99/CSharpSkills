@@ -525,7 +525,12 @@ namespace Starter
 			page.Problems.Add(new Problem {
 				Type = typeof(FourSum),
 				Method = "Start",
-				Description = "Quadruplets with a Sum of the Specified Value "
+				Description = "Quadruplets with a Sum of the Specified Value"
+			});
+			page.Problems.Add(new Problem {
+				Type = typeof(RemoveNode),
+				Method = "Start",
+				Description = "Remove Nth Node form End of List"
 			});
 			web.Pages.Add(page);
 			#endregion
