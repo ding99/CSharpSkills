@@ -23,8 +23,10 @@ namespace LeetCode.Leet11_20 {
 			letters.Add("ac");
 
 			Console.Write("Output: [");
-			foreach (string a in letters)
-				Console.Write($"\"{a}\",");
+			int n = letters.Count;
+			for (int i = 0; i < n; i++)
+				Console.Write($"\"{letters[i]}\"{(i + 1 == n ? "]" : ",")}");
+			Console.WriteLine();
 		}
 	}
 }
