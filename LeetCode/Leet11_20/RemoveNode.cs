@@ -18,6 +18,8 @@ namespace LeetCode.Leet11_20 {
 	public class RemoveNode {
 		public void Start() {
 			Action(new int[] { 1, 2, 3, 4, 5}, 2);
+			Action(new int[] { 1 }, 1);
+			Action(new int[] { 1, 2 }, 1);
 		}
 
 		private void Action(int[] array, int n) {
