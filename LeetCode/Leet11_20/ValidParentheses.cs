@@ -16,6 +16,11 @@ namespace LeetCode.Leet11_20 {
 	public class ValidParentheses {
 		public void Start() {
 			Action("()");
+			Action("()[]{}");
+			Action("(]");
+			Action("[)");
+			Action("{[]}");
+			Action("[()}");
 		}
 
 		private void Action(string s) {
@@ -32,8 +37,7 @@ namespace LeetCode.Leet11_20 {
 			if (size > 0) {
 				Stack<char> stack = new Stack<char>();
 
-				foreach (char c in s) {
-					Console.WriteLine(c);
+				foreach (char c in s)
 					if (table.ContainsValue(c))
 						stack.Push(c);
 					else if (table.ContainsKey(c) && (stack.Count < 1 || table[c] != stack.Pop())) {
@@ -41,8 +45,6 @@ namespace LeetCode.Leet11_20 {
 						break;
 					}
 				}
-			}
-
 
 			Console.WriteLine($"Output: {result}");
 		}
