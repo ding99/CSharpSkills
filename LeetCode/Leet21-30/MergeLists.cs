@@ -13,7 +13,7 @@ namespace LeetCode.Leet21_30 {
 		}
 
 		private void Action(int[] l1, int[] l2) {
-			Console.WriteLine($"Input:{Display(l1, "l1")}, {Display(l2, "l2")}");
+			Console.WriteLine($"Input:{Display(l1, "l1")},{Display(l2, "l2")}");
 
 			int[] merged = new int[0];
 			Console.WriteLine($"Output:{Display(merged, string.Empty)}");
