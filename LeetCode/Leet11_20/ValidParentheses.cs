@@ -9,8 +9,6 @@ Open brackets must be closed in the correct order.
 
 using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Linq;
 
 namespace LeetCode.Leet11_20 {
 	public class ValidParentheses {
