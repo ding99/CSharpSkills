@@ -532,6 +532,11 @@ namespace Starter
 				Method = "Start",
 				Description = "Remove Nth Node form End of List"
 			});
+			page.Problems.Add(new Problem {
+				Type = typeof(ValidParentheses),
+				Method = "Start",
+				Description = "Valid Parenheses"
+			});
 			web.Pages.Add(page);
 			#endregion
 			menu.Webs.Add(web);
