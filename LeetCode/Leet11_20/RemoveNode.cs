@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Linq;
 
 namespace LeetCode.Leet11_20 {
 
@@ -23,7 +21,7 @@ namespace LeetCode.Leet11_20 {
 		}
 
 		private void Action(int[] array, int n) {
-			int size = Display(array, "nums");
+			int size = Display(array, "head");
 			Console.WriteLine($", n = {n}");
 
 			int[] result = new int[0];
@@ -39,30 +37,15 @@ namespace LeetCode.Leet11_20 {
 				int count = 0;
 				for (curt = head; curt != null; curt = curt.next)
 					count++;
-				Console.WriteLine($"count 1 [{count}]");
-				for (curt = head; curt != null; curt = curt.next)
-					Console.Write(curt.value + " ");
-				Console.WriteLine();
 
-				next = null;
-				for (curt = head; curt != null; next = curt, curt = curt.next) {
+				for (next = null, curt = head; curt != null; next = curt, curt = curt.next)
 					if(count-- == n) {
-						Console.WriteLine($"found: {curt.value} count {count}");
 						if (next == null)
 							head = curt.next;
 						else
 							next.next = curt.next;
 						break;
 					}
-				}
-
-				count = 0;
-				for (curt = head; curt != null; curt = curt.next)
-					count++;
-				Console.WriteLine($"count 2 [{count}]");
-				for (curt = head; curt != null; curt = curt.next)
-					Console.Write(curt.value + " ");
-				Console.WriteLine();
 
 				List<int> values = new List<int>();
 				for (curt = head; curt != null; curt = curt.next)
