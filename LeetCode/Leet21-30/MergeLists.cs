@@ -37,16 +37,6 @@ namespace LeetCode.Leet21_30 {
 			return sorted;
 		}
 
-		private string ShowSort(SortedList<int, int> sorted, string name) {
-			StringBuilder b = new StringBuilder();
-
-			if (!string.IsNullOrEmpty(name))
-				b.Append($"{name}:");
-			foreach (var a in sorted)
-				b.Append($"{a.Key}-{a.Value} ");
-			return b.ToString();
-		}
-
 		private string Display(int[] nums, string name) {
 			StringBuilder b = new StringBuilder();
 
