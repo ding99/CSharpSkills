@@ -7,6 +7,8 @@ namespace LeetCode.Leet21_30 {
 	public class GenerateParentheses {
 		public void Start() {
 			Action(1);
+			Action(2);
+			//Action(3);
 		}
 
 		private void Action(int n) {
@@ -16,6 +18,7 @@ namespace LeetCode.Leet21_30 {
 			List<List<int>> combines = NextList(new List<List<int>>(), master);
 
 			int size = combines.Count;
+			Console.WriteLine($"combines size {size}");
 			string[] result = new string[size];
 			for(int i = 0; i < size; i++) {
 				StringBuilder b = new StringBuilder();
@@ -33,26 +36,35 @@ namespace LeetCode.Leet21_30 {
 
 		private List<List<int>> NextList(List<List<int>> prev, Dictionary<int, int> master) {
 			List<List<int>> next = new List<List<int>>();
+
+			Console.WriteLine($"[] {master[1]} / {master[-1]} / {prev.Count} -> {next.Count}");
+
 			if (prev.Count < 1) {
 				next.Add(new List<int> { 1 });
 				master[1]--;
-			} else foreach(List<int> t in prev) {
-				if(master[1] > 0 && t.Sum() + 1 > 0) {
-					List<int> newP = new List<int>(t);
-					newP.Add(1);
-					next.Add(newP);
-					master[1]--;
+			} else
+				foreach (List<int> t in prev) {
+					Console.WriteLine($"<> {master[1]} / {master[-1]} / {prev.Count} -> {next.Count}");
+					if (master[1] > 0 && t.Sum() + 1 >= 0) {
+						List<int> newP = new List<int>(t);
+						newP.Add(1);
+						next.Add(newP);
+						master[1]--;
+					}
+
+					if (master[-1] > 0 && t.Sum() - 1 >= 0) {
+						List<int> newN = new List<int>(t);
+						newN.Add(-1);
+						next.Add(newN);
+						master[-1]--;
+					}
 				}
-				if(master[-1] > 0 && t.Sum() -1 >= 0) {
-					List<int> newN = new List<int>(t);
-					newN.Add(-1);
-					next.Add(newN);
-					master[-1]--;
-				}
-			}
-			if(master[1] + master[-1] == 0)
+			//TODO
+			Console.WriteLine($"   {master[1]} / {master[-1]} / {prev.Count} -> {next.Count}");
+
+			if (master[1] + master[-1] == 0)
 				return next;
-			return NextList(next, master);
+			return NextList(next, master);  //TODO
 		}
 	}
 }
