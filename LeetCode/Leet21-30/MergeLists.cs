@@ -16,36 +16,23 @@ namespace LeetCode.Leet21_30 {
 		private void Action(int[] l1, int[] l2) {
 			Console.WriteLine($"Input:{Display(l1, "l1")},{Display(l2, "l2")}");
 
-			SortedList<int, int> s1 = CreateSort(new List<int>(l1));
-			Console.WriteLine(ShowSort(s1, "sorted list 1"));
+			SortedList<int, int> s1 = CreateList(new List<int>(l1));
+			//Console.WriteLine(ShowSort(s1, "sorted list 1"));
 
-			SortedList<int, int> s2 = CreateSort(new List<int>(l1));
-			Console.WriteLine(ShowSort(s2, "sorted list 1"));
+			SortedList<int, int> s2 = CreateList(new List<int>(l2));
+			//Console.WriteLine(ShowSort(s2, "sorted list 1"));
 
 			List<int> mergelist = s1.Values.ToList();
 			mergelist.AddRange(s2.Values.ToList());
-			SortedList<int, int> mergedSort = CreateSort(mergelist);
-			Console.WriteLine(ShowSort(mergedSort, "merged list"));
+			mergelist.Sort();
+			SortedList<int, int> mergedSort = CreateList(mergelist);
+			//Console.WriteLine(ShowSort(mergedSort, "merged list"));
 
 			int[] merged = mergedSort.Values.ToArray();
-
-			foreach (var a in mergelist)
-				Console.WriteLine($"-1- {a}");
-			mergelist.Sort();
-			foreach(var a in mergelist)
-				Console.WriteLine($"-2- {a}");
-			try {
-				SortedList<int, int> sm = new SortedList<int, int>(mergelist.ToDictionary(s => s));
-			}
-			catch(Exception e) {
-				Console.WriteLine(e.Message);
-			}
-
-		//	int[] merged = mergelist.ToArray();
 			Console.WriteLine($"Output:{Display(merged, string.Empty)}");
 		}
 
-		private SortedList<int, int> CreateSort(List<int> list) {
+		private SortedList<int, int> CreateList(List<int> list) {
 			SortedList<int, int>  sorted = new SortedList<int, int>();
 			for (int i = 0; i < list.Count; i++)
 				sorted.Add(i + 1, list[i]);
