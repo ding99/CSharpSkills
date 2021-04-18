@@ -50,7 +50,7 @@ namespace LeetCode.Leet21_30 {
 						newP.Add(1);
 						next.Add(newP);
 						master[1]--;
-						DLs(next, "mid1");
+						DLs(next, "mid+1");
 					}
 
 					if (master[-1] > 0 && t.Sum() - 1 >= 0) {
@@ -71,7 +71,7 @@ namespace LeetCode.Leet21_30 {
 		}
 
 		private void DLs(List<List<int>> list, string name) {
-			StringBuilder b = new StringBuilder($"-{name}- ({list.Count})");
+			StringBuilder b = new StringBuilder($"--{name}: ({list.Count})");
 			foreach (var a in list)
 				b.Append($"{DL(a)}");
 			Console.WriteLine(b);
