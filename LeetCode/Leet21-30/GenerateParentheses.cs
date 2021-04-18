@@ -6,7 +6,7 @@ using System.Linq;
 namespace LeetCode.Leet21_30 {
 	public class GenerateParentheses {
 		public void Start() {
-			Action(1);
+			//Action(1);
 			Action(2);
 			//Action(3);
 		}
@@ -36,9 +36,9 @@ namespace LeetCode.Leet21_30 {
 
 		private List<List<int>> NextList(List<List<int>> prev, Dictionary<int, int> master) {
 			List<List<int>> next = new List<List<int>>();
-
+			Console.WriteLine("------------");
 			Console.WriteLine($"[] {master[1]} / {master[-1]} / {prev.Count} -> {next.Count}");
-
+			DLs(prev, "prev");
 			if (prev.Count < 1) {
 				next.Add(new List<int> { 1 });
 				master[1]--;
@@ -50,6 +50,7 @@ namespace LeetCode.Leet21_30 {
 						newP.Add(1);
 						next.Add(newP);
 						master[1]--;
+						DLs(next, "mid+1");
 					}
 
 					if (master[-1] > 0 && t.Sum() - 1 >= 0) {
@@ -57,14 +58,30 @@ namespace LeetCode.Leet21_30 {
 						newN.Add(-1);
 						next.Add(newN);
 						master[-1]--;
+						DLs(next, "mid-1");
 					}
 				}
 			//TODO
 			Console.WriteLine($"   {master[1]} / {master[-1]} / {prev.Count} -> {next.Count}");
+			DLs(next, "last");
 
 			if (master[1] + master[-1] == 0)
 				return next;
 			return NextList(next, master);  //TODO
+		}
+
+		private void DLs(List<List<int>> list, string name) {
+			StringBuilder b = new StringBuilder($"--{name}: ({list.Count})");
+			foreach (var a in list)
+				b.Append($"{DL(a)}");
+			Console.WriteLine(b);
+		}
+		private string DL(List<int> list) {
+			StringBuilder b = new StringBuilder($" <");
+			for (int i = 0; i < list.Count; i++)
+				b.Append(list[i]).Append(i + 1 == list.Count ? "" : ",");
+			b.Append(">");
+			return b.ToString();
 		}
 	}
 }
