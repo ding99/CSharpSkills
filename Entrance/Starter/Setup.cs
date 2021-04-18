@@ -561,6 +561,11 @@ namespace Starter
 				Method = "Start",
 				Description = "Merge Two Sorted Lists"
 			});
+			page.Problems.Add(new Problem {
+				Type = typeof(GenerateParentheses),
+				Method = "Start",
+				Description = "Generate Parentheses"
+			});
 			web.Pages.Add(page);
 			#endregion 21-30
 			menu.Webs.Add(web);
