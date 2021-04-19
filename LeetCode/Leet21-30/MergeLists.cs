@@ -1,5 +1,10 @@
 ﻿/*
+1. Merge Two Sorted Lists
 Merge two sorted linked lists and return it as a sorted list. The list should be made by splicing together the nodes of the first two lists.
+
+2. Merge k Sorted Lists
+You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
+Merge all the linked-lists into one sorted linked-list and return it.
 */
 
 using System;
@@ -32,8 +37,9 @@ namespace LeetCode.Leet21_30 {
 
 		public void StartKList() {
 			ActionKList(new int[][] { new int[] { 1, 2, 4, }, new int[] { 1, 3, 4 } });
-			//ActionKList(new int[] { }, new int[] { });
-			//ActionKList(new int[] { }, new int[] { 0 });
+			ActionKList(new int[][] { new int[] {1,4,5}, new int[]{1, 3, 4}, new int[] {2,6} });
+			ActionKList(new int[][] { });
+			ActionKList(new int[][] { new int[] { } });
 		}
 
 		private void ActionKList(int[][] list) {
