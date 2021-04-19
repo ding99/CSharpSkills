@@ -18,7 +18,7 @@ namespace LeetCode.Leet21_30 {
 			List<List<int>> combines = NextList(new List<List<int>>(), master);
 
 			int size = combines.Count;
-			Console.WriteLine($"combines size {size}");
+			Console.WriteLine($"============\ncombines size {size}");
 			string[] result = new string[size];
 			for(int i = 0; i < size; i++) {
 				StringBuilder b = new StringBuilder();
@@ -37,14 +37,17 @@ namespace LeetCode.Leet21_30 {
 		private List<List<int>> NextList(List<List<int>> prev, Dictionary<int, int> master) {
 			List<List<int>> next = new List<List<int>>();
 			Console.WriteLine("------------");
-			Console.WriteLine($"[] {master[1]} / {master[-1]} / {prev.Count} -> {next.Count}");
+			Console.WriteLine($"[] (1){master[1]} / (-1){master[-1]} / (prev){prev.Count} -> (next){next.Count}");
 			DLs(prev, "prev");
+			
 			if (prev.Count < 1) {
 				next.Add(new List<int> { 1 });
 				master[1]--;
-			} else
+			} else {
 				foreach (List<int> t in prev) {
-					Console.WriteLine($"<> {master[1]} / {master[-1]} / {prev.Count} -> {next.Count}");
+					Console.WriteLine($"<> (1){master[1]} / (-1){master[-1]} / (prev){prev.Count} -> (next){next.Count}");
+					Console.WriteLine($"list {DL(t)}");
+					Console.WriteLine($"(1)  Sum {t.Sum()}");
 					if (master[1] > 0 && t.Sum() + 1 >= 0) {
 						List<int> newP = new List<int>(t);
 						newP.Add(1);
@@ -53,6 +56,7 @@ namespace LeetCode.Leet21_30 {
 						DLs(next, "mid+1");
 					}
 
+					Console.WriteLine($"(-1) Sum {t.Sum()}");
 					if (master[-1] > 0 && t.Sum() - 1 >= 0) {
 						List<int> newN = new List<int>(t);
 						newN.Add(-1);
@@ -61,8 +65,10 @@ namespace LeetCode.Leet21_30 {
 						DLs(next, "mid-1");
 					}
 				}
+			}
+
 			//TODO
-			Console.WriteLine($"   {master[1]} / {master[-1]} / {prev.Count} -> {next.Count}");
+			Console.WriteLine($"   (1){master[1]} / (-1){master[-1]} / (prev){prev.Count} -> (next){next.Count}");
 			DLs(next, "last");
 
 			if (master[1] + master[-1] == 0)
