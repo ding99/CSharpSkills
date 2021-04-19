@@ -9,6 +9,7 @@ namespace LeetCode.Leet21_30 {
 			Action(1);
 			Action(2);
 			Action(3);
+			Action(4);
 		}
 
 		public class Stat {
@@ -27,7 +28,6 @@ namespace LeetCode.Leet21_30 {
 			List<Stat> stats = Layer(new List<Stat> { new Stat(new List<int>(), new Dictionary<int, int> { { 1, n }, { -1, n } }) }, 2 * n);
 
 			int size = stats.Count;
-			Console.WriteLine($"============\ncombines size {size}");
 			string[] result = new string[size];
 			for (int i = 0; i < size; i++) {
 				StringBuilder b = new StringBuilder();
@@ -52,8 +52,6 @@ namespace LeetCode.Leet21_30 {
 
 		private List<Stat> Next(Stat prev) {
 			List<Stat> stats = new List<Stat>();
-			Console.WriteLine("------------");
-			DStat(prev, "prev");
 
 			if (prev.list.Count < 1) {
 				stats.Add(new Stat(
@@ -75,9 +73,6 @@ namespace LeetCode.Leet21_30 {
 					stats.Add(new Stat(newL, newD));
 				}
 			}
-
-			foreach (var a in stats)
-				DStat(a, "next");
 
 			return stats;
 		}
