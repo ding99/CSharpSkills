@@ -27,6 +27,40 @@ namespace LeetCode.Leet21_30 {
 			SortedList<int, int> mergedSort = CreateList(mergedList);
 
 			int[] merged = mergedSort.Values.ToArray();
+			Console.WriteLine($"Output: {Display(merged, string.Empty)}");
+		}
+
+		public void StartKList() {
+			ActionKList(new int[][] { new int[] { 1, 2, 4, }, new int[] { 1, 3, 4 } });
+			//ActionKList(new int[] { }, new int[] { });
+			//ActionKList(new int[] { }, new int[] { 0 });
+		}
+
+		private void ActionKList(int[][] list) {
+			int size = list.Length;
+			StringBuilder b = new StringBuilder($"Input: [");
+			for(int i = 0; i < size; i++)
+				b.Append($"{Display(list[i], string.Empty)}{(i + 1 == size ? "" : ",")}");
+			b.Append("]");
+			Console.WriteLine(b);
+
+			List<SortedList<int, int>> sorts = new List<SortedList<int, int>>();
+			foreach (int[] l in list)
+				sorts.Add(CreateList(new List<int>(l)));
+
+			//SortedList<int, int> s1 = CreateList(new List<int>(list[0]));
+			//SortedList<int, int> s2 = CreateList(new List<int>(list[1]));
+
+			List<int> mergedList = new List<int>();
+			foreach (var a in sorts)
+				mergedList.AddRange(a.Values.ToList());
+
+			//List<int> mergedList = s1.Values.ToList();
+			//mergedList.AddRange(s2.Values.ToList());
+			mergedList.Sort();
+			SortedList<int, int> mergedSort = CreateList(mergedList);
+
+			int[] merged = mergedSort.Values.ToArray();
 			Console.WriteLine($"Output:{Display(merged, string.Empty)}");
 		}
 
@@ -41,8 +75,8 @@ namespace LeetCode.Leet21_30 {
 			StringBuilder b = new StringBuilder();
 
 			if(!string.IsNullOrEmpty(name))
-				b.Append($" {name} =");
-			b.Append(" [");
+				b.Append($" {name} = ");
+			b.Append("[");
 
 			int n = nums.Length;
 			if(n > 0)

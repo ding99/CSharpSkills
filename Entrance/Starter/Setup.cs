@@ -566,6 +566,11 @@ namespace Starter
 				Method = "Start",
 				Description = "Generate Parentheses"
 			});
+			page.Problems.Add(new Problem {
+				Type = typeof(MergeLists),
+				Method = "StartKList",
+				Description = "Merge K Sorted Lists"
+			});
 			web.Pages.Add(page);
 			#endregion 21-30
 			menu.Webs.Add(web);
