@@ -9,13 +9,13 @@ using System.Collections.Generic;
 
 namespace LeetCode.Leet21_30 {
 	public class MergeLists {
-		public void Start() {
-			Action(new int[] { 1, 2, 4, }, new int[] { 1, 3, 4 });
-			Action(new int[] { }, new int[] { });
-			Action(new int[] { }, new int[] { 0 });
+		public void Start2List() {
+			Action2List(new int[] { 1, 2, 4, }, new int[] { 1, 3, 4 });
+			Action2List(new int[] { }, new int[] { });
+			Action2List(new int[] { }, new int[] { 0 });
 		}
 
-		private void Action(int[] l1, int[] l2) {
+		private void Action2List(int[] l1, int[] l2) {
 			Console.WriteLine($"Input:{Display(l1, "l1")},{Display(l2, "l2")}");
 
 			SortedList<int, int> s1 = CreateList(new List<int>(l1));

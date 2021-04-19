@@ -558,7 +558,7 @@ namespace Starter
 			page = new Page { Title = "LeetCode 21-30" };
 			page.Problems.Add(new Problem {
 				Type = typeof(MergeLists),
-				Method = "Start",
+				Method = "Start2List",
 				Description = "Merge Two Sorted Lists"
 			});
 			page.Problems.Add(new Problem {
