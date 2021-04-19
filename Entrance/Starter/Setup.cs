@@ -558,13 +558,18 @@ namespace Starter
 			page = new Page { Title = "LeetCode 21-30" };
 			page.Problems.Add(new Problem {
 				Type = typeof(MergeLists),
-				Method = "Start",
+				Method = "Start2List",
 				Description = "Merge Two Sorted Lists"
 			});
 			page.Problems.Add(new Problem {
 				Type = typeof(GenerateParentheses),
 				Method = "Start",
 				Description = "Generate Parentheses"
+			});
+			page.Problems.Add(new Problem {
+				Type = typeof(MergeLists),
+				Method = "StartKList",
+				Description = "Merge K Sorted Lists"
 			});
 			web.Pages.Add(page);
 			#endregion 21-30
