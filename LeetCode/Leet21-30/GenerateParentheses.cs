@@ -6,9 +6,9 @@ using System.Linq;
 namespace LeetCode.Leet21_30 {
 	public class GenerateParentheses {
 		public void Start() {
-			//Action(1);
+			Action(1);
 			Action(2);
-			//Action(3);
+			Action(3);
 		}
 
 		public class Stat {
