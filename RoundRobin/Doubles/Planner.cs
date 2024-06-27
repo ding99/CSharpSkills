@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Text;
+﻿using System.Text;
 
 namespace RoundRobin.Doubles;
 
@@ -31,13 +30,22 @@ public class Planner
 
     public void Create10()
     {
-        var t10 = Find(10, 6);
-        //STour(t10);
+        var new10 = Find(10, 6);
+
+        var orig = DTour(new10, "New10");
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine(orig);
+
+        var stat = STour(new10);
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine(stat);
     }
+
+
 
     public Tour Find(int MaxPern, int MaxAttd)
     {
-        var list = CreateMaster(MaxPern, MaxAttd);
+        var list = CreateOrder(MaxPern, MaxAttd);
         StringBuilder b = new();
 
         b.AppendLine($"List:  {string.Join(", ", list)}");
@@ -52,16 +60,19 @@ public class Planner
         return tour;
     }
 
-    public List<int> CreateMaster(int MaxPers, int MaxAttd)
+    #region create tour
+
+    public List<int> CreateOrder(int maxPlayers, int maxAttd)
     {
         List<int> list = [];
         int a;
         Random rd = new();
+        int maxPosition = maxPlayers * maxAttd;
 
-        while (list.Count < 60)
+        while (list.Count < maxPosition)
         {
-            a = rd.Next(MaxPers);
-            if (list.Count(x => x == a) < MaxAttd)
+            a = rd.Next(maxPlayers);
+            if (list.Count(x => x == a) < maxAttd)
             {
                 list.Add(a);
             }
@@ -74,56 +85,104 @@ public class Planner
     public Tour CreateTour(int MaxPers, int MaxAttd, List<int> list)
     {
         Tour tour = new();
+        Round crtRd = new();
+        Court crtCt = new();
+
         int maxCt = MaxPers / 4;
         Console.WriteLine($"MaxCourt {maxCt}");
 
-        int i;
-        Court crtCt = new();
-        while (list.Count > 0)
+        int i = 0, count;
+        while ((count = list.Count) > 0)
         {
             for (i = 0; i < list.Count; i++)
             {
-                if (PartCourt(crtCt, i, i) < 1)
+                if (!InRound(crtRd, list[i]) && !InCourt(crtCt, list[i]))
                 {
-                    if (CourtN(crtCt) < 4)
-                    {
-                        crtCt = AppendPers(crtCt, i);
-                    }
-                    else
-                    {
-                        //TODO
-                    }
+                    (tour, crtRd, crtCt) = AppendPlayer(tour, crtRd, crtCt, maxCt, list[i]);
+                    list.RemoveAt(i);
+                    break;
                 }
-                else
-                {
-                    //TODO
-                }
+            }
+
+            if (list.Count == count)
+            {
+                break;
             }
         }
 
-        if (CourtN(crtCt) > 0)
+        if (CountPos(crtCt) > 0)
         {
-            tour = AppendCt(tour, crtCt, maxCt);
+            tour = AppendCt(tour, crtRd, crtCt, maxCt);
         }
 
         return tour;
     }
 
-    private Court AppendPers(Court ct, int p)
+    private bool InRound(Round rd, int p)
     {
-        switch(CourtN(ct))
+        return rd.Courts.Any(x => InCourt(x, p));
+    }
+
+    private bool InCourt(Court ct, int p)
+    {
+        return ct.Team1.Players.Contains(p) || ct.Team2.Players.Contains(p);
+    }
+
+    private (Tour, Round, Court) AppendPlayer(Tour tr, Round rd, Court ct, int maxCt, int p)
+    {
+        switch(CountPos(ct))
         {
         case 0:
         case 1:
             ct.Team1.Players.Add(p);
             break;
         case 2:
+            ct.Team2.Players.Add(p);
+            break;
         case 3:
             ct.Team2.Players.Add(p);
+            if (rd.Courts.Count == maxCt)
+            {
+                tr.Rounds.Add(CloneRd(rd));
+                rd = new() { Courts = [CloneCt(ct)] };
+            }
+            else
+            {
+                rd.Courts.Add(CloneCt(ct));
+                if (rd.Courts.Count == maxCt)
+                {
+                    tr.Rounds.Add(CloneRd(rd));
+                    rd = new();
+                }
+            }
+            ct = new();
             break;
         }
 
-        return ct;
+        return (tr, rd, ct);
+    }
+
+    private Tour AppendCt(Tour tr, Round rd, Court ct, int maxCt)
+    {
+        if (CountPos(ct) == 4)
+        {
+            if (rd.Courts.Count == maxCt)
+            {
+                tr.Rounds.Add(CloneRd(rd));
+                rd = new() { Courts = [CloneCt(ct)] };
+            }
+            else
+            {
+                rd.Courts.Add(CloneCt(ct));
+            }
+        }
+        
+        if (rd.Courts.Count > 0)
+        {
+            tr.Rounds.Add(rd);
+        }
+
+        return tr;
     }
 
     private Tour AppendCt(Tour tour, Court court, int maxCt)
@@ -140,6 +199,14 @@ public class Planner
         return tour;
     }
 
+    private Round CloneRd(Round rd)
+    {
+        return new Round
+        {
+            Courts =  new(rd.Courts)
+        };
+    }
+
     private Court CloneCt(Court ct) {
         return new Court
         {
@@ -148,10 +215,12 @@ public class Planner
         };
     }
 
-    private int CourtN(Court court)
+    private int CountPos(Court court)
     {
         return court.Team1.Players.Count + court.Team2.Players.Count;
     }
+
+    #endregion
 
     #region statistics
 
@@ -159,6 +228,7 @@ public class Planner
     {
         var mx = MaxTour(tour);
         StringBuilder b = new($"Max ({mx + 1})");
+        b.AppendLine();
 
         var players = Enumerable.Range(0, mx + 1).Select(i => new Summary() {
             Self = i,
