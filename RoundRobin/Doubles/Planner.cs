@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text;
 
 namespace RoundRobin.Doubles;
 
@@ -10,6 +11,7 @@ public class Planner
         Console.WriteLine("-- Round Robin Doubles");
 
         ShowNet();
+        Create10();
 
         Console.ResetColor();
     }
@@ -25,6 +27,130 @@ public class Planner
         var stat = STour(rr10);
         Console.ForegroundColor = ConsoleColor.Cyan;
         Console.WriteLine(stat);
+    }
+
+    public void Create10()
+    {
+        var t10 = Find(10, 6);
+        //STour(t10);
+    }
+
+    public Tour Find(int MaxPern, int MaxAttd)
+    {
+        var list = CreateMaster(MaxPern, MaxAttd);
+        StringBuilder b = new();
+
+        b.AppendLine($"List:  {string.Join(", ", list)}");
+        var g = list.GroupBy(x => x).ToList();
+        b.AppendLine($"Group: {string.Join(", ", g.Select(x => x.Count()))}");
+
+        var tour = CreateTour(MaxPern, MaxAttd, list);
+        b.AppendLine($"Rounds {tour.Rounds.Count}");
+
+        Console.ForegroundColor = ConsoleColor.DarkYellow;
+        Console.WriteLine(b);
+        return tour;
+    }
+
+    public List<int> CreateMaster(int MaxPers, int MaxAttd)
+    {
+        List<int> list = [];
+        int a;
+        Random rd = new();
+
+        while (list.Count < 60)
+        {
+            a = rd.Next(MaxPers);
+            if (list.Count(x => x == a) < MaxAttd)
+            {
+                list.Add(a);
+            }
+        }
+
+        Console.WriteLine($"Group size {list.Count}");
+        return list;
+    }
+
+    public Tour CreateTour(int MaxPers, int MaxAttd, List<int> list)
+    {
+        Tour tour = new();
+        int maxCt = MaxPers / 4;
+        Console.WriteLine($"MaxCourt {maxCt}");
+
+        int i;
+        Court crtCt = new();
+        while (list.Count > 0)
+        {
+            for (i = 0; i < list.Count; i++)
+            {
+                if (PartCourt(crtCt, i, i) < 1)
+                {
+                    if (CourtN(crtCt) < 4)
+                    {
+                        crtCt = AppendPers(crtCt, i);
+                    }
+                    else
+                    {
+                        //TODO
+                    }
+                }
+                else
+                {
+                    //TODO
+                }
+            }
+        }
+
+        if (CourtN(crtCt) > 0)
+        {
+            tour = AppendCt(tour, crtCt, maxCt);
+        }
+
+        return tour;
+    }
+
+    private Court AppendPers(Court ct, int p)
+    {
+        switch(CourtN(ct))
+        {
+        case 0:
+        case 1:
+            ct.Team1.Players.Add(p);
+            break;
+        case 2:
+        case 3:
+            ct.Team2.Players.Add(p);
+            break;
+        }
+
+        return ct;
+    }
+
+    private Tour AppendCt(Tour tour, Court court, int maxCt)
+    {
+        var lastR = tour.Rounds.LastOrDefault();
+        if (lastR != null && lastR.Courts.Count < maxCt)
+        {
+            lastR.Courts.Add(CloneCt(court));
+        }
+        else
+        {
+            tour.Rounds.Add(new Round { Courts = [CloneCt(court)] });
+        }
+        return tour;
+    }
+
+    private Court CloneCt(Court ct) {
+        return new Court
+        {
+            Team1 = new() { Players = new(ct.Team1.Players) },
+            Team2 = new() { Players = new(ct.Team2.Players) }
+        };
+    }
+
+    private int CourtN(Court court)
+    {
+        return court.Team1.Players.Count + court.Team2.Players.Count;
     }
 
     #region statistics
@@ -72,16 +198,16 @@ public class Planner
         {
             return round.Courts.Sum(c => PartCourt(c, s, n));
         }
+    }
 
-        int PartCourt(Court court, int s, int n)
-        {
-            return PartTeam(court.Team1, s, n) + PartTeam(court.Team2, s, n);
-        }
+    private static int PartCourt(Court court, int s, int n)
+    {
+        return PartTeam(court.Team1, s, n) + PartTeam(court.Team2, s, n);
+    }
 
-        int PartTeam(Team team, int s, int n)
-        {
-            return s != n && team.Players.Contains(s) && team.Players.Contains(n) ? 1 : 0;
-        }
+    private static int PartTeam(Team team, int s, int n)
+    {
+        return s != n && team.Players.Contains(s) && team.Players.Contains(n) ? 1 : 0;
     }
 
     private static int[] OpposTour(Tour tour, int s, int mx)
