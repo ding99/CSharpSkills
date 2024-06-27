@@ -8,7 +8,9 @@ public class Planner
     public void Start()
     {
         Console.WriteLine("-- Round Robin Doubles");
+
         ShowNet();
+
         Console.ResetColor();
     }
 
@@ -16,19 +18,21 @@ public class Planner
     {
         var rr10 = GetNet10();
 
+        var orig = DTour(rr10, "Net10");
         Console.ForegroundColor = ConsoleColor.Yellow;
-        DTour(rr10, "Net10");
+        Console.WriteLine(orig);
 
+        var stat = STour(rr10);
         Console.ForegroundColor = ConsoleColor.Cyan;
-        STour(rr10);
+        Console.WriteLine(stat);
     }
 
     #region statistics
 
-    private void STour(Tour tour)
+    private string STour(Tour tour)
     {
         var mx = MaxTour(tour);
-        Console.WriteLine($"Max ({mx + 1})");
+        StringBuilder b = new($"Max ({mx + 1})");
 
         var players = Enumerable.Range(0, mx + 1).Select(i => new Summary() {
             Self = i,
@@ -37,11 +41,12 @@ public class Planner
             Opponents = OpposTour(tour, i, mx + 1)
 
         });
-        Console.WriteLine(string.Join("", players.Select(p => DPlayer(p))));
+        b.AppendLine(string.Join("", players.Select(p => DSummary(p))));
 
+        return b.ToString();
     }
 
-    private string DPlayer(Summary s)
+    private static string DSummary(Summary s)
     {
         StringBuilder b = new();
         b.AppendLine($"-- {s.Self + 1} ({s.Played})");
@@ -54,7 +59,7 @@ public class Planner
         return b.ToString();
     }
 
-    private int[] PartsTour(Tour tour, int s, int mx)
+    private static int[] PartsTour(Tour tour, int s, int mx)
     {
         return Enumerable.Range(0, mx).Select(i => PartTour(tour, s, i)).ToArray();
     }
@@ -79,7 +84,7 @@ public class Planner
         }
     }
 
-    private int[] OpposTour(Tour tour, int s, int mx)
+    private static int[] OpposTour(Tour tour, int s, int mx)
     {
         return Enumerable.Range(0, mx).Select(i => OppoTour(tour, s, i)).ToArray();
     }
@@ -144,7 +149,7 @@ public class Planner
 
     #region basic
 
-    private static void DTour(Tour tour, string name)
+    private static string DTour(Tour tour, string name)
     {
         StringBuilder b = new($"-- Tour {name} (Rounds {tour.Rounds.Count})");
         b.AppendLine();
@@ -152,7 +157,7 @@ public class Planner
             Environment.NewLine,
             tour.Rounds.Select(r => string.Join(", ", r.Courts.Select(c => DCourt(c))))
         ));
-        Console.WriteLine(b);
+        return b.ToString();
 
         string DCourt(Court c)
         {
@@ -170,7 +175,7 @@ public class Planner
 
     #region example
 
-    private Tour GetNet10()
+    private static Tour GetNet10()
     {
         return new Tour(new([
             new(new([
